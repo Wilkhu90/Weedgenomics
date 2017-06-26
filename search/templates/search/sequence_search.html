@@ -1,0 +1,26 @@
+{% extends "search/index.html" %}
+
+{% block search %}
+
+<form role="search" method="get" action="{% url 'search:search_sequence' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <b>Sequence:</b> <input type="text" class ="form-control" name="seq_query" value="">
+        <b>Keyword:</b> <input type="text" class ="form-control" name="keyword" value="">
+        <b>Species:</b> <select name="species">
+            <option value="Poa infirma">Poa infirma</option>
+            <option value="Poa supina">Poa supina</option>
+            <option value="Poa annua-infirma homeolog">Poa annua-infirma homeolog</option>
+            <option value="Poa annua-supina homeolog">Poa annua-supina homeolog</option>
+            <option value="Eleusine indica">Eleusine indica</option>
+        </select>
+        <b>Threshold:</b> <select name="threshold">
+            <option value="None">None</option>
+        </select>
+    <br/><br/><button type="submit" class="btn btn-primary">Search</button>
+    </div>&nbsp
+</form><br/>
+
+{% block results %} {% endblock %}
+
+{% endblock %}

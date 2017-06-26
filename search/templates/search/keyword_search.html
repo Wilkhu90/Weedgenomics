@@ -1,0 +1,22 @@
+{% extends "search/index.html" %}
+
+{% block search %}
+
+<form class="navbar-form navbar-left" role="search" method="get" action="{% url 'search:search_keyword' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <b>Keyword:</b> <input type="text" class ="form-control" name="query" value="">
+        <b>Species:&nbsp</b><select name="species">
+            <option value="Poa infirma">Poa infirma</option>
+            <option value="Poa supina">Poa supina</option>
+            <option value="Poa annua-infirma homeolog">Poa annua-infirma homeolog</option>
+            <option value="Poa annua-supina homeolog">Poa annua-supina homeolog</option>
+            <option value="Eleusine indica">Eleusine indica</option>
+        </select>
+    </div>&nbsp
+    <button type="submit" class="btn btn-primary">Search</button>
+</form><br/>
+
+{% block results %} {% endblock %}
+
+{% endblock %}

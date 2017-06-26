@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Genomics </title>
+    {% load staticfiles %}
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel = "script" href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" />
+    <link rel="script" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+    <link rel="stylesheet" type= "text/css" href="https://fonts.googleapis.com/css?family=Satisfy">
+    <!--Overriding certain features of bootstrap-->
+    <link rel = "stylesheet" type="text/css" href="{% static 'search/style.css' %}" />
+</head>
+
+<body>
+            <div>
+
+            <div class="header">
+                <h1>Welcome to the future home of weedgenomics.com</h1>
+                <br>
+                <hr>
+            </div>
+            <div>
+                <a href="http://www.auburn.edu/academic/agriculture/cses/WeedGenomics/" target="_blank">Current Weed Genomics Website</a>
+                <br>
+                <a href="http://cses.auburn.edu/turfgrass-management/weed-identification/" target="_blank">Auburn University Weed Identification</a>
+                <hr>
+                <p>The initial Auburn Weed Genomics website was developed to create a searchable repository of genomic and
+                transcriptomic data of weed species.  WeedGenomics.com will soon take the place of the Auburn Weed Genomics Site.</p>
+                <!--<a href = 'http://cses.auburn.edu/turfgrass-management/weed-identification/' target='_blank'><img src = 'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/goosegrass-plant.jpg' alt= 'Goosegrass - Eleusine indica'/>-->
+            </div>
+
+            </div>
+
+            <div class="container">
+                <a href="http://www.resistancelab.org/" target="_blank"><img src="{% static 'search/images/logo.jpg'%}" alt="AU Herbicide Resistance Lab Logo" class="HRDL"></a>
+                <p>The Auburn University Herbicide Resistance Diagnostics Lab is accepting samples.  If you need
+                samples diagnosed for resistance contact Dr. McElroy at the lab at resistancelab at auburn.edu. </p>
+                <table class="test">
+                <tr>
+                    <td> <a href="{% url 'search:search_keyword_render' %}"><h4>Keyword Search</h4></a></td>
+                    <td> <a href="{% url 'search:search_sequence_render' %}"><h4>Sequence Search</h4></a></td>
+                </table><br/>
+            <!--Search bar-->
+            {% block search %} {% endblock %}
+            </div>
+</body>
+
+</html>

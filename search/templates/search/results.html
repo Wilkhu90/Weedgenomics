@@ -1,0 +1,20 @@
+{% extends "search/keyword_search.html" %}
+
+{% load staticfiles %}
+
+{% block results %}
+    {% if results %}
+    <br/><br/>
+    <ul>
+        {% for result in results %}
+        <li>
+            <a href="{% url 'search:detail' result.id %}">{{result.gene_description}}</a>&nbsp;
+            <a href="{% url 'search:download_fasta' result.id %}"> <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /> </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h4> No results found </h4>
+    {% endif %}
+
+{% endblock %}
