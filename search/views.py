@@ -80,7 +80,9 @@ def search_keyword_render(request):
 def download_file(request, seq_id):
     seq_id = int(seq_id)
     sequence = Sequences.objects.get(id=seq_id)
-    my_sequence = str(sequence.sequence)
+    my_sequence = ">"+sequence.gene_description
+    my_sequence = my_sequence+"\n"+str(sequence.sequence)
+
     temp_file = tempfile.TemporaryFile()
     my_sequence = my_sequence.encode()
 
