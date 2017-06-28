@@ -53,28 +53,40 @@
   </nav>
   <div class="container">
     <p>The initial Auburn Weed Genomics website was developed to create a searchable repository of genomic and
-      transcriptomic data of weed species.  WeedGenomics.com will soon take the place of the Auburn Weed Genomics Site.</p>
-      <p>The Auburn University Herbicide Resistance Diagnostics Lab is accepting samples.  If you need
-        samples diagnosed for resistance contact Dr. McElroy at the lab at resistancelab at auburn.edu. </p>
-        <table class="test">
+      transcriptomic data of weed species.  WeedGenomics.com will soon take the place of the Auburn Weed Genomics Site.
+    </p>
+    <p>The Auburn University Herbicide Resistance Diagnostics Lab is accepting samples.  If you need
+        samples diagnosed for resistance contact Dr. McElroy at the lab at resistancelab at auburn.edu.
+    </p>
+    <div id="subMenu">
+        <table class="table">
           <tr>
-            <td> <a href="{% url 'search:search_keyword_render' %}"><h4>Keyword Search</h4></a></td>
-            <td> <a href="{% url 'search:search_sequence_render' %}"><h4>Sequence Search</h4></a></td>
-          </table><br/>
-          <!--Search bar-->
-          {% block search %} {% endblock %}
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-        <script>
-        /*
-          Script for setting active item in the Navigation bar
-        */
-        var selector = '#bs-example-navbar-collapse-1 li';
-        $(selector).on('click', function(){
-          $(selector).removeClass('active');
-          $(this).addClass('active');
-        });
-        </script>
-      </body>
+            <td><a href="{% url 'search:search_keyword_render' %}"><h4>Keyword Search</h4></a></td>
+            <td><a href="{% url 'search:search_sequence_render' %}"><h4>Sequence Search</h4></a></td>
+          </tr>
+        </table>
+      </div>
+        <!--Search bar-->
+        {% block search %} {% endblock %}
+      </div>
 
-      </html>
+<div class="footer">
+  <div class="container">
+    <p>© 2015 Copyright: <a href=""> Weed Genomics </a></p>
+  </div>
+</div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+      <script>
+      /*
+      Script for setting active item in the Navigation bar
+      */
+      var selector = '#bs-example-navbar-collapse-1 li';
+      $(selector).on('click', function(){
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+      });
+      </script>
+    </body>
+
+    </html>

@@ -64,45 +64,37 @@
   color: white;
   text-shadow: 1px 1px 2px black;
 }
-.newText{
-color: DarkBlue;
-font-size: 24px;
+.thead-inverse {
+  background-color: rgba(0, 0, 0, 0.41);
 }
 
-.container{
-  width: center;
-  margin: auto;
+#subMenu .table{
+  border: 0px;
+  border-collapse: initial;
+}
+#subMenu tbody{
+  border: none;
+}
+#subMenu tr{
+  border: none;
+}
+#subMenu td{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.41);
+  border-radius: 20px;
+}
+#subMenu td a{
+  font-family: monospace;
+  color: black;
+  text-decoration: none;
 }
 
-img.HRDL{
-  height: 250px;
-  width: 500px;
-  display:block;
-  margin: 0px auto;
-}
-
-a{
-  color:DarkBlue;
-}
-
-
-table, tbody {
-  text-align: left;;
-}
-
-tr:hover {background-color: #f5f5f5}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-
-table.test td {
-    margin: 5px 5px 5px 5px;
-    padding: 5px 5px 5px 5px;
-}
-table.test {
-    border-collapse: separate;
-    border-spacing: 5px;
-    *border-collapse: expression('separate', cellSpacing = '10px');
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
