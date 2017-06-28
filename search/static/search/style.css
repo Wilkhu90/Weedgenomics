@@ -25,8 +25,17 @@
   color: Black;
   font-size:40px;
   font-family: monospace;
-  padding: 80px 0px 0px 10px;
+  padding: 50px 0px 0px 40px;
   cursor: pointer;
+}
+.header h2 {
+  vertical-align: bottom;
+  color: Black;
+  font-size:30px;
+  font-family: monospace;
+  cursor: pointer;
+  margin-top: -10px;
+  padding-left: 20px;
 }
 .header img {
   height: 100px;
