@@ -12,6 +12,16 @@ def index(request):
     context = {}
     return render(request, template, context)
 
+def main(request):
+    template = "search/main.html"
+    context = {}
+    return render(request, template, context)
+
+def species(request):
+    template = "search/species.html"
+    context = {}
+    return render(request, template, context)
+
 
 def search_keyword(request):
     query = request.GET.get("query")
