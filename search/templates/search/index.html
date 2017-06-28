@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> Genomics </title>
-    {% load staticfiles %}
-    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel = "script" href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" />
-    <link rel="script" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
-    <link rel="stylesheet" type= "text/css" href="https://fonts.googleapis.com/css?family=Satisfy">
-    <!--Overriding certain features of bootstrap-->
-    <link rel = "stylesheet" type="text/css" href="{% static 'search/style.css' %}" />
+  <meta charset="UTF-8">
+  <title> Weed Genomics </title>
+  {% load staticfiles %}
+  <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel = "script" href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" />
+  <link rel="script" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+  <link rel="stylesheet" type= "text/css" href="https://fonts.googleapis.com/css?family=Satisfy">
+  <!--Overriding certain features of bootstrap-->
+  <link rel = "stylesheet" type="text/css" href="{% static 'search/style.css' %}" />
 </head>
 
 <body>
-            <div>
+  <div>
+    <div class="header">
+      <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="http://www.resistancelab.org/" target="_blank">
+          <img src="{% static 'search/images/logo.jpg'%}" width="30" height="30" alt="AU Herbicide Resistance Lab Logo">
+        </a>
+      </nav>
+      <a href="/search"><h1>Weed Genomics</h1></a>
+    </div>
+  </div>
+  <nav class="navbar navbar-default" id="navId">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-            <div class="header">
-                <h1>Welcome to the future home of weedgenomics.com</h1>
-                <br>
-                <hr>
-            </div>
-            <div>
-                <a href="http://www.auburn.edu/academic/agriculture/cses/WeedGenomics/" target="_blank">Current Weed Genomics Website</a>
-                <br>
-                <a href="http://cses.auburn.edu/turfgrass-management/weed-identification/" target="_blank">Auburn University Weed Identification</a>
-                <hr>
-                <p>The initial Auburn Weed Genomics website was developed to create a searchable repository of genomic and
-                transcriptomic data of weed species.  WeedGenomics.com will soon take the place of the Auburn Weed Genomics Site.</p>
-                <!--<a href = 'http://cses.auburn.edu/turfgrass-management/weed-identification/' target='_blank'><img src = 'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/goosegrass-plant.jpg' alt= 'Goosegrass - Eleusine indica'/>-->
-            </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="/search">Home</span></a>
+          </li>
+          <li>
+            <a href="http://www.auburn.edu/academic/agriculture/cses/WeedGenomics/" target="_blank">Current Weed Genomics Website</a>
+          </li>
+          <li>
+            <a href="http://cses.auburn.edu/turfgrass-management/weed-identification/" target="_blank">Auburn University Weed Identification</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+    <p>The initial Auburn Weed Genomics website was developed to create a searchable repository of genomic and
+      transcriptomic data of weed species.  WeedGenomics.com will soon take the place of the Auburn Weed Genomics Site.</p>
+      <p>The Auburn University Herbicide Resistance Diagnostics Lab is accepting samples.  If you need
+        samples diagnosed for resistance contact Dr. McElroy at the lab at resistancelab at auburn.edu. </p>
+        <table class="test">
+          <tr>
+            <td> <a href="{% url 'search:search_keyword_render' %}"><h4>Keyword Search</h4></a></td>
+            <td> <a href="{% url 'search:search_sequence_render' %}"><h4>Sequence Search</h4></a></td>
+          </table><br/>
+          <!--Search bar-->
+          {% block search %} {% endblock %}
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script>
+        /*
+          Script for setting active item in the Navigation bar
+        */
+        var selector = '#bs-example-navbar-collapse-1 li';
+        $(selector).on('click', function(){
+          $(selector).removeClass('active');
+          $(this).addClass('active');
+        });
+        </script>
+      </body>
 
-            </div>
-
-            <div class="container">
-                <a href="http://www.resistancelab.org/" target="_blank"><img src="{% static 'search/images/logo.jpg'%}" alt="AU Herbicide Resistance Lab Logo" class="HRDL"></a>
-                <p>The Auburn University Herbicide Resistance Diagnostics Lab is accepting samples.  If you need
-                samples diagnosed for resistance contact Dr. McElroy at the lab at resistancelab at auburn.edu. </p>
-                <table class="test">
-                <tr>
-                    <td> <a href="{% url 'search:search_keyword_render' %}"><h4>Keyword Search</h4></a></td>
-                    <td> <a href="{% url 'search:search_sequence_render' %}"><h4>Sequence Search</h4></a></td>
-                </table><br/>
-            <!--Search bar-->
-            {% block search %} {% endblock %}
-            </div>
-</body>
-
-</html>
+      </html>

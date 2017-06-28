@@ -2,25 +2,59 @@
   font-family: "Playfair Display", Arial;
 }
 
+#navId {
+  background-color: #333333;
+  border-color: #333333;
+  border-radius: 0px;
+}
 
 .header{
   background-image: url("http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/close-up-of-infloresence-and-trifoliate-leaves.jpg");
   background-position: center center;
   background-size: cover;
-  height: 100px;
+  height: 200px;
   width: 100%;
   position: relative;
-  text-align: center center;
   background-attachment: fixed;
 }
-
+.header a:hover {
+  text-decoration: none;
+}
 .header h1 {
-  text-align: center;
   vertical-align: bottom;
-  color:DarkBlue;
+  color: Black;
   font-size:40px;
+  font-family: monospace;
+  padding: 80px 0px 0px 10px;
+  cursor: pointer;
+}
+.header img {
+  height: 100px;
+  width: 200px;
+  border-radius: 20px;
 }
 
+#bs-example-navbar-collapse-1 {
+  font-family: monospace;
+}
+#bs-example-navbar-collapse-1 li a{
+  font-family: monospace;
+  font-size: 20px;
+}
+#bs-example-navbar-collapse-1 li.active a{
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  text-shadow: 1px 1px 2px black;
+  display: inline;
+  zoom: 1;
+  padding: 10px 20px 22px 20px;
+  border-radius: 5px;
+}
+#bs-example-navbar-collapse-1 li a:hover{
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
 .newText{
 color: DarkBlue;
 font-size: 24px;
