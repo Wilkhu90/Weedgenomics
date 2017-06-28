@@ -1,10 +1,24 @@
-<html>
-    <head>
-        <title>Details</title>
-    </head>
-    <body>
-        <b>Description:</b> {{sequence.gene_description}}<br/>
-        <b>Species:</b> {{sequence.species}}<br/>
-        <b>Sequences:</b> {{sequence.sequence}}<br/>
-    </body>
-</html>
+{% extends "search/results.html" %}
+
+{% load staticfiles %}
+
+{% block results %}
+  <table class="table table-striped table-bordered">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Description</th>
+        <th>Species</th>
+        <th>Sequence</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr>
+        <td>{{sequence.gene_description}}</td>
+        <td>{{sequence.species}}</td>
+        <td><textarea class="form-control" id="sequenceText">
+          {{sequence.sequence}}
+          </textarea></td>
+      </tr>
+      </tbody>
+  </table>
+{% endblock %}
