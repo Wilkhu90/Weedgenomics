@@ -5,6 +5,8 @@ app_name = 'search'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^main/$', views.main, name='main'),
+    url(r'^species/$', views.species, name='species'),
     url(r'^search_keyword/$', views.search_keyword, name='search_keyword'),
     url(r'^search_sequence/$', views.search_sequence, name='search_sequence'),
     url(r'^search_keyword_render/$', views.search_keyword_render, name='search_keyword_render'),

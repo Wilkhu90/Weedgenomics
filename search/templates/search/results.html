@@ -9,7 +9,10 @@
       <thead class="thead-inverse">
         <tr>
           <th>#</th>
-          <th>Result(s)</th>
+          <th>Sequence Result(s)</th>
+          <th>BlastX</th>
+          <th>BlastN</th>
+          <th>Local Blast</th>
           <th>Download</th>
         </tr>
       </thead>
@@ -18,6 +21,9 @@
         <tr>
           <th scope="row">{{forloop.counter}}</th>
           <td><a href="{% url 'search:detail' result.id %}">{{result.gene_description}}</a></td>
+          <td><button type="button" class="btn btn-primary">BlastX</button></td>
+          <td><button type="button" class="btn btn-primary">BlastN</button></td>
+          <td><button type="button" class="btn btn-primary">Local Blast</button></td>
           <td><a href="{% url 'search:download_fasta' result.id %}"> <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /> </a></td>
         </tr>
         {% endfor %}
