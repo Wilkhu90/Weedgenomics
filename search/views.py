@@ -150,11 +150,15 @@ def blastn_search(request):
     results_handle.close()
 
     results = blast_records.alignments
+
     hits = []
     for result in results:
         for hit in result.hsps:
+            # get the id based on contg_id / hit.hit_id
+            sequence = Sequences.objects.get(contig_id=result.hit_id)
             hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
-                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct})
+                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
+                         "description": sequence.gene_description, "ID": sequence.id})
 
     context = {"hits": hits}
     return render(request, "search/blastn_results.html", context)
