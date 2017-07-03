@@ -1,0 +1,21 @@
+
+{% load staticfiles %}
+
+{% block results %}
+    {% if hits %}
+    <br/><br/>
+    <ul>
+        {% for result in hits %}
+        <li>
+            "Hit expect: " {{ result["Hit_exp"] }} <br/>
+            "Hit query:  " {{ result["Hit_query"] }} <br/>
+            "            " {{ result["Hit_match"] }} <br/>
+            "Hit subject: "{{ result["Hit_sbject"] }} <br/>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h4> No results found </h4>
+    {% endif %}
+
+{% endblock %}

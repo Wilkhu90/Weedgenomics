@@ -157,3 +157,8 @@ def blastn_search(request):
 
     context = {"hits": hits}
     return render(request, "search/blastn_results.html", context)
+
+
+def blastn_render(request):
+    return render(request, "search/blastn_search.html", {})
+
