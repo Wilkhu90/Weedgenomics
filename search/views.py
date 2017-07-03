@@ -124,21 +124,22 @@ def download_file(request, seq_id):
 
 
 def blastn_search(request):
-    database_name = request.GET.get("database")
+    database_name = request.GET.get("species")
     query = request.GET.get("query")
 
     # check which database because each database has different names
     if database_name == 'Poa_infirma':
-        database = 'data/Poa_infirma/InfirmaFinal.fasta'
+        database = 'search/data/Poa_infirma/InfirmaFinal.fasta'
 
     # write query in fasta format
     query = '>test query \n'+query
-    file = open('tempfiles/query.fasta', 'w')
+    file = open('search/tempfiles/query.fasta', 'w')
     file.write(query)
+    file.close()
 
     # select files
-    query = "query.fasta"
-    output = 'tempfiles/search.xml'
+    query = "search/tempfiles/query.fasta"
+    output = "search/tempfiles/search.xml"
 
     cline_blast = NcbiblastnCommandline(query=query, db=database, evalue=0.00001, outfmt=5, out=output)
     stdout, stderr = cline_blast()
