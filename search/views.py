@@ -4,6 +4,8 @@ from django.http import Http404
 from django.shortcuts import render
 from .models import Sequences
 from django.http import HttpResponse
+from Bio.Blast.Applications import NcbiblastnCommandline
+from Bio.Blast import NCBIXML
 import tempfile
 
 
@@ -119,3 +121,39 @@ def download_file(request, seq_id):
 
     temp_file.close()
     return response
+
+
+def blastn_search(request):
+    database_name = request.GET.get("database")
+    query = request.GET.get("query")
+
+    # check which database because each database has different names
+    if database_name == 'Poa_infirma':
+        database = 'data/Poa_infirma/InfirmaFinal.fasta'
+
+    # write query in fasta format
+    query = '>test query \n'+query
+    file = open('tempfiles/query.fasta', 'w')
+    file.write(query)
+
+    # select files
+    query = "query.fasta"
+    output = 'tempfiles/search.xml'
+
+    cline_blast = NcbiblastnCommandline(query=query, db=database, evalue=0.00001, outfmt=5, out=output)
+    stdout, stderr = cline_blast()
+
+    # read output file
+    results_handle = open(output, 'r')
+    blast_records = NCBIXML.read(results_handle)
+    results_handle.close()
+
+    results = blast_records.alignments
+    hits = []
+    for result in results:
+        for hit in result.hsps:
+            hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
+                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct})
+
+    context = {"hits": hits}
+    return render(request, "search/blastn_results.html", context)
