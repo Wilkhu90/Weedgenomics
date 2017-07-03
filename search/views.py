@@ -106,7 +106,7 @@ def download_file(request, seq_id):
     temp_sequence = ''.join(temp_list)
 
     my_sequence = "> "+sequence.contig_id+" | "+sequence.gene_description
-    my_sequence = my_sequence+"\n"+temp_sequence
+    my_sequence = my_sequence+temp_sequence
 
     temp_file = tempfile.TemporaryFile()
     my_sequence = my_sequence.encode()
