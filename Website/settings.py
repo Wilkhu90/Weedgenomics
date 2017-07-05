@@ -70,20 +70,33 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Website.wsgi.application'
 
+AWS_ACCESS_KEY_ID = "AKIAIC2OABNTTY5MEAZQ"
+AWS_SECRET_ACCESS_KEY = "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"
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'weedgenomics',
-        'USER': 'root',
-        'PASSWORD': 'sunit',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+if 'RDS_DB_NAME' in os.environ:
+	DATABASES = {
+	    'default': {
+	        'ENGINE': 'django.db.backends.mysql',
+	        'NAME': os.environ['RDS_DB_NAME'],
+	        'USER': os.environ['RDS_USERNAME'],
+	        'PASSWORD': os.environ['RDS_PASSWORD'],
+	        'HOST': os.environ['RDS_HOSTNAME'],
+	        'PORT': os.environ['RDS_PORT'],
+	    }
+	}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'weedgenomics',
+            'USER': 'root',
+            'PASSWORD': 'sunit',
+            'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+            'PORT': '3306',
+        }
     }
-}
 
 
 # Password validation
