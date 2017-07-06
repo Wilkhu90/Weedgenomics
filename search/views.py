@@ -28,7 +28,9 @@ def species(request):
 def search_keyword(request):
     query = request.GET.get("query")
     species = request.GET.get("species")
-    all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
+    all_sequences = []
+    if len(query) > 0:
+        all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
     context = {"results": all_sequences}
     template = "search/results.html"
     return render(request, template, context)
@@ -136,34 +138,35 @@ def blastn_search(request):
     if database_name == 'Poa_supina':
         database = 'search/data/Poa_supina/SupinaFinal.fasta'
 
-    # write query in fasta format
-    query = '>test query \n'+query
-    file = open('search/tempfiles/query.fasta', 'w')
-    file.write(query)
-    file.close()
-
-    # select files
-    query = "search/tempfiles/query.fasta"
-    output = "search/tempfiles/search.xml"
-
-    cline_blast = NcbiblastnCommandline(query=query, db=database, evalue=0.00001, outfmt=5, out=output)
-    stdout, stderr = cline_blast()
-
-    # read output file
-    results_handle = open(output, 'r')
-    blast_records = NCBIXML.read(results_handle)
-    results_handle.close()
-
-    results = blast_records.alignments
-
     hits = []
-    for result in results:
-        for hit in result.hsps:
-            # get the id based on contg_id / hit.hit_id
-            sequence = Sequences.objects.get(contig_id=result.hit_id)
-            hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
-                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
-                         "description": sequence.gene_description, "ID": sequence.id})
+    if len(query) > 0:
+        # write query in fasta format
+        query = '>test query \n'+query
+        file = open('search/tempfiles/query.fasta', 'w')
+        file.write(query)
+        file.close()
+
+        # select files
+        query = "search/tempfiles/query.fasta"
+        output = "search/tempfiles/search.xml"
+
+        cline_blast = NcbiblastnCommandline(query=query, db=database, evalue=0.00001, outfmt=5, out=output)
+        stdout, stderr = cline_blast()
+
+        # read output file
+        results_handle = open(output, 'r')
+        blast_records = NCBIXML.read(results_handle)
+        results_handle.close()
+
+        results = blast_records.alignments
+
+        for result in results:
+            for hit in result.hsps:
+                # get the id based on contg_id / hit.hit_id
+                sequence = Sequences.objects.get(contig_id=result.hit_id)
+                hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
+                             "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
+                             "description": sequence.gene_description, "ID": sequence.id, "Hit_id": result.hit_id})
 
     context = {"hits": hits}
     return render(request, "search/blastn_results.html", context)
