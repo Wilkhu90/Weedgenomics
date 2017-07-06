@@ -36,7 +36,7 @@
           <li class="dropdown" id="tools">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Keyword Search</a></li>
+              <li><a href="{% url 'search:search_keyword_render' %}">Keyword Search</a></li>
               <li><a href="{% url 'search:blastn_render' %}"><h4>Sequence Search</h4></a></li>
               <li><a href="#">Herbicide Resistance Search</a></li>
             </ul>
