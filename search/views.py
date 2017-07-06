@@ -124,17 +124,17 @@ def blastn_search(request):
 
     # check which database because each database has different names
     if database_name == 'Cyperus_esculentus':
-        database = 'search/data/Poa_infirma/YNS_NewNames.fasta'
+        database = 'search/data/Cyperus_esculentus/YNS_NewNames.fasta'
     if database_name == 'Cyperus_rotundus':
-        database = 'search/data/Poa_infirma/PNS_TrinityNewNames2.fasta'
+        database = 'search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta'
     if database_name == 'Poa_annua_infirma':
-        database = 'search/data/Poa_infirma/AnnuaInfirmaHomeoFinal.fasta'
+        database = 'search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta'
     if database_name == 'Poa_annua_supina':
-        database = 'search/data/Poa_infirma/AnnuaSupinaHomeoFinal.fasta'
+        database = 'search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta'
     if database_name == 'Poa_infirma':
         database = 'search/data/Poa_infirma/InfirmaFinal.fasta'
-    else:
-        database = 'search/data/Poa_infirma/SupinaFinal.fasta'
+    if database_name == 'Poa_supina':
+        database = 'search/data/Poa_supina/SupinaFinal.fasta'
 
     # write query in fasta format
     query = '>test query \n'+query
