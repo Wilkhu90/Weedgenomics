@@ -2,55 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f677117d-3ea3-4917-bd99-eb545adb38aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_esculentus/YNS_NewNames.fasta.nhr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_esculentus/YNS_NewNames.fasta.nin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_esculentus/YNS_NewNames.fasta.nog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_esculentus/YNS_NewNames.fasta.nsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_esculentus/YNS_NewNames.fasta.nsi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_esculentus/YNS_NewNames.fasta.nsq" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta.nhr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta.nin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta.nog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta.nsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta.nsi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta.nsq" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta.nhr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta.nin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta.nog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta.nsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta.nsi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta.nsq" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta.nhr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta.nin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta.nog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta.nsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta.nsi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta.nsq" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_infirma/InfirmaFinal.fasta.nhr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_infirma/InfirmaFinal.fasta.nin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_infirma/InfirmaFinal.fasta.nog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_infirma/InfirmaFinal.fasta.nsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_infirma/InfirmaFinal.fasta.nsi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_infirma/InfirmaFinal.fasta.nsq" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_supina/SupinaFinal.fasta.nhr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_supina/SupinaFinal.fasta.nin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_supina/SupinaFinal.fasta.nog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_supina/SupinaFinal.fasta.nsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_supina/SupinaFinal.fasta.nsi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/Poa_supina/SupinaFinal.fasta.nsq" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ebextensions/01_awsbean.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ebextensions/02_packages.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ebextensions/03_python.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/tempfiles/query.fasta" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/tempfiles/search.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/templates/search/blastn_results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/templates/search/blastn_search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Website/settings.py" afterPath="$PROJECT_DIR$/Website/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/templates/search/index.html" afterPath="$PROJECT_DIR$/search/templates/search/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/urls.py" afterPath="$PROJECT_DIR$/search/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/templates/search/blastn_results.html" afterPath="$PROJECT_DIR$/search/templates/search/blastn_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/views.py" afterPath="$PROJECT_DIR$/search/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,8 +19,18 @@
       <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/templates/search/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="277">
+              <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sequence_results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search/templates/search/sequence_results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="151" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="151" />
               <folding />
             </state>
           </provider>
@@ -76,8 +39,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="378">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -88,18 +51,8 @@
       <file leaf-file-name="blastn_results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blastn_search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -108,8 +61,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="295">
+              <caret line="160" column="37" lean-forward="false" selection-start-line="160" selection-start-column="37" selection-end-line="160" selection-end-column="37" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -117,51 +70,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search/models.py">
+      <file leaf-file-name="query.fasta" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search/tempfiles/query.fasta">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Website/settings.py">
+      <file leaf-file-name="search.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search/tempfiles/search.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="77" column="9" lean-forward="false" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="-513">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#355#361#0" expanded="true" />
+                <element signature="e#406#412#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search/templates/search/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-792">
-              <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="keyword_search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search/templates/search/keyword_search.html">
+      <file leaf-file-name="blastn_search.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_search.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="16" column="65" lean-forward="false" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search/admin.py">
+      <file leaf-file-name="weedGenomicsBlastSearch.0.0.2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/Genomics/blast search/weedGenomicsBlastSearch.0.0.2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="147">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search/templates/search/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -178,10 +136,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="blastn-update" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -199,8 +158,12 @@
         <option value="$PROJECT_DIR$/search/templates/search/sequence_search.html" />
         <option value="$PROJECT_DIR$/search/templates/search/keyword_search.html" />
         <option value="$PROJECT_DIR$/search/templates/search/results.html" />
-        <option value="$PROJECT_DIR$/search/urls.py" />
         <option value="$PROJECT_DIR$/search/templates/search/sequence_results.html" />
+        <option value="$PROJECT_DIR$/search/urls.py" />
+        <option value="$PROJECT_DIR$/search/templates/search/blastn_search.html" />
+        <option value="$PROJECT_DIR$/search/tempfiles/search.xml" />
+        <option value="$USER_HOME$/Desktop/Genomics/blast search/weedGenomicsBlastSearch.0.0.2.py" />
+        <option value="$PROJECT_DIR$/search/templates/search/blastn_results.html" />
         <option value="$PROJECT_DIR$/search/views.py" />
       </list>
     </option>
@@ -210,6 +173,9 @@
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1048" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -226,8 +192,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,20 +203,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Weedgenomics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Weedgenomics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Weedgenomics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Website" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,11 +256,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
+              <option name="myItemId" value="tempfiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,12 +269,132 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sunit Sivaraj\Desktop\Website\search\static\search\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sunit Sivaraj\PycharmProjects\Weedgenomics\search" />
       <recent name="C:\Users\Sunit Sivaraj\Desktop\Website\search\static\search" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sunit Sivaraj\PycharmProjects\Weedgenomics\search\static\search\data" />
+      <recent name="C:\Users\Sunit Sivaraj\Desktop\Website\search\static\search\images" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/static/search/images/logo.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/static/search/style.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/templates/search/details.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/templates/search/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/templates/search/results.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/urls.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/views.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/templates/search/main.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/search/templates/search/species.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -340,7 +408,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.views">
+  <component name="RunManager" selected="Python.weedGenomicsBlastSearch.0.0.2">
     <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -354,6 +422,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Website" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="weedGenomicsBlastSearch.0.0.2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Sunit Sivaraj\AppData\Local\Programs\Python\Python35\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Genomics/blast search" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Website" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Genomics/blast search/weedGenomicsBlastSearch.0.0.2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -423,12 +509,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.views" />
+      <item index="1" class="java.lang.String" itemvalue="Python.weedGenomicsBlastSearch.0.0.2" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.views" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.weedGenomicsBlastSearch.0.0.2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -457,22 +545,58 @@
       <option name="project" value="LOCAL" />
       <updated>1498669259141</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated download view for fasta format">
+      <created>1498674949128</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1498674949128</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added databases">
+      <created>1499073469968</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1499073469968</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added a new view and new url">
+      <created>1499075861993</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1499075861993</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added new html files and view">
+      <created>1499077112049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1499077112049</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated bastn view">
+      <created>1499104614567</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1499104614567</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2604726" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10590944" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2400906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -517,48 +641,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated download view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated download view" />
+    <MESSAGE value="Updated download view for fasta format" />
+    <MESSAGE value="Added databases" />
+    <MESSAGE value="Added a new view and new url" />
+    <MESSAGE value="added new html files and view" />
+    <MESSAGE value="updated bastn view" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated bastn view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/search/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="75" lean-forward="false" selection-start-line="44" selection-start-column="75" selection-end-line="44" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search/static/search/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
@@ -570,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -690,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,32 +885,10 @@
     </entry>
     <entry file="file://$USER_HOME$/Downloads/PNS_Trinity1000.fasta" />
     <entry file="file://$USER_HOME$/Downloads/search.py" />
-    <entry file="file://$PROJECT_DIR$/search/static/search/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/sequence_search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="90" lean-forward="false" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/sequence_results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search/templates/search/details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,14 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/keyword_search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="65" lean-forward="false" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -848,10 +908,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/results.html">
+    <entry file="file://$PROJECT_DIR$/Website/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="1617">
+          <caret line="77" column="9" lean-forward="false" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -864,7 +924,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_results.html">
+    <entry file="file://$PROJECT_DIR$/search/static/search/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/keyword_search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/sequence_search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/tempfiles/query.fasta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -874,42 +974,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="336">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/index.html">
+    <entry file="file://$USER_HOME$/Desktop/Genomics/blast search/weedGenomicsBlastSearch.0.0.2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-792">
-          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="147">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/tempfiles/search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#355#361#0" expanded="true" />
+            <element signature="e#406#412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/sequence_results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="151" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="151" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/settings.py">
+    <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="77" column="9" lean-forward="false" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="9" />
+        <state relative-caret-position="168">
+          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="295">
+          <caret line="160" column="37" lean-forward="false" selection-start-line="160" selection-start-column="37" selection-end-line="160" selection-end-column="37" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
