@@ -1,0 +1,24 @@
+
+{% load staticfiles %}
+
+{% block results %}
+    {% if hits %}
+    <br/><br/>
+    <ul>
+        {% for result in hits %}
+            {% for key, value in result.items %}
+                {% if key == 'ID'%}
+                    <a href="{% url 'search:download_fasta' value %}"> <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /> </a>
+
+                {% else %}
+                    <li>{{key}} : {{value}}</li>
+                {% endif %}
+            {% endfor %}
+        <br/>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h4> No results found </h4>
+    {% endif %}
+
+{% endblock %}
