@@ -12,6 +12,8 @@
 </head>
 
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <nav class="navbar navbar-default navbar-fixed-top" id="navId">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -37,7 +39,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="{% url 'search:search_keyword_render' %}">Keyword Search</a></li>
-              <li><a href="{% url 'search:blastn_render' %}"><h4>Sequence Search</h4></a></li>
+              <li><a href="{% url 'search:blastn_render' %}">Sequence Search</a></li>
               <li><a href="#">Herbicide Resistance Search</a></li>
             </ul>
           </li>
@@ -58,7 +60,7 @@
     </div><!-- /.container-fluid -->
   </nav>
   <div class="header">
-    <a href="/search"><h1>Logo</h1><h1>here</h1></a>
+    <a href="/search"><img src="{% static 'search/images/WGDR-logo-SM.png' %}"></a>
   </div>
   <br/>
   <div class="container">
@@ -71,9 +73,6 @@
     <p>© 2017 Copyright: <a href=""> Weed Genomics </a></p>
   </div>
 </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
       <script>
       /*
       Script for setting active item in the Navigation bar

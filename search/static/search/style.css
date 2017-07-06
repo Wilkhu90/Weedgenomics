@@ -43,6 +43,8 @@
   height: 100px;
   width: 200px;
   border-radius: 20px;
+  margin-top: 50px;
+  margin-left: 10px;
 }
 
 #bs-example-navbar-collapse-1 {
@@ -99,3 +101,5 @@
   width: 100%;
   height: 200px;
 }
+.stretch_it{ white-space: nowrap; }
+.justify{ text-align:justify; }

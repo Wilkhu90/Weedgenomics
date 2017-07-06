@@ -4,20 +4,91 @@
 
 {% block results %}
     {% if hits %}
-    <br/><br/>
-    <ul>
-        {% for result in hits %}
-            {% for key, value in result.items %}
-                {% if key == 'ID'%}
-                    <a href="{% url 'search:download_fasta' value %}"> <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /> </a>
 
-                {% else %}
-                    <li>{{key}} : {{value}}</li>
-                {% endif %}
-            {% endfor %}
-        <br/>
-        {% endfor %}
-    </ul>
+    {% for result in hits %}
+    <table class="table table-striped table-bordered">
+      <thead class="thead-inverse">
+        <tr>
+          <th>{{forloop.counter}}. <a href="{% url 'search:download_fasta' result.ID %}">Download  <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /></a></th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr>
+          <td>
+            <h4>Description: {{result.description|title}}</h4>
+            <div class="row">
+              <div class="col-xs-6">
+                <h4>Sequence ID: {{result.Hit_id}}</h4>
+              </div>
+              <div class="col-xs-3">
+                <h4>Length: {{result.Hit_sbject|length}}</h4>
+              </div>
+              <div class="col-xs-3">
+                <h4>Threshold Exp: {{result.Hit_exp}}</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                Query
+              </div>
+              <div class="col-xs-11">
+                <p class="stretch">{{result.Hit_query}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+
+              </div>
+              <div class="col-xs-11">
+                <p class="stretch">{{result.Hit_match}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                Subject
+              </div>
+              <div class="col-xs-11">
+                <p class="stretch">{{result.Hit_sbject}}</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+    </table>
+    <script>
+    $.fn.strech_text = function(){
+      var elmt          = $(this),
+          cont_width    = elmt.width(),
+          txt           = elmt.html(),
+          one_line      = $('<span class="stretch_it">' + txt + '</span>'),
+          nb_char       = elmt.text().length,
+          spacing       = cont_width/nb_char,
+          txt_width;
+
+      elmt.html(one_line);
+      txt_width = one_line.width();
+
+      if (txt_width < cont_width){
+          var  char_width     = txt_width/nb_char,
+               ltr_spacing    = spacing - char_width + (spacing - char_width)/nb_char ;
+
+          one_line.css({'letter-spacing': ltr_spacing});
+      } else {
+          one_line.contents().unwrap();
+          elmt.addClass('justify');
+      }
+    };
+
+
+    $(document).ready(function () {
+      $('.stretch').each(function(){
+          $(this).strech_text();
+      });
+    });
+    </script>
+    <br/>
+    {% endfor %}
+
     {% else %}
     <h4> No results found </h4>
     {% endif %}
