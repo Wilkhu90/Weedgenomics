@@ -24,17 +24,12 @@ def species(request):
     context = {}
     return render(request, template, context)
 
-
+# Sequences.objects.exclude(gene_description__icontains=query).filter(species__iexact=species)
 def search_keyword(request):
     query = request.GET.get("query")
     species = request.GET.get("species")
-    all_sequences = Sequences.objects.all()
-    results = []
-    for sequence in all_sequences:
-        description = sequence.gene_description
-        if description.find(query) != -1 and sequence.species == species:
-            results.append(sequence)
-    context = {"results": results}
+    all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
+    context = {"results": all_sequences}
     template = "search/results.html"
     return render(request, template, context)
 
@@ -166,4 +161,3 @@ def blastn_search(request):
 
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
-
