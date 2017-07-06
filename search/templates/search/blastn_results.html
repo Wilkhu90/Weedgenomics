@@ -37,7 +37,7 @@
             </div>
             <div class="row">
               <div class="col-xs-1">
-
+                Mismatch
               </div>
               <div class="col-xs-11">
                 <p class="stretch">{{result.Hit_match}}</p>
@@ -59,12 +59,11 @@
     $.fn.strech_text = function(){
       var elmt          = $(this),
           cont_width    = elmt.width(),
-          txt           = elmt.html(),
+          txt           = elmt.html().replace(/ /g, 'X').replace(/\|/g, '-'),
           one_line      = $('<span class="stretch_it">' + txt + '</span>'),
           nb_char       = elmt.text().length,
           spacing       = cont_width/nb_char,
           txt_width;
-
       elmt.html(one_line);
       txt_width = one_line.width();
 
