@@ -14,15 +14,18 @@ def index(request):
     context = {}
     return render(request, template, context)
 
+
 def main(request):
     template = "search/main.html"
     context = {}
     return render(request, template, context)
 
+
 def species(request):
     template = "search/species.html"
     context = {}
     return render(request, template, context)
+
 
 # Sequences.objects.exclude(gene_description__icontains=query).filter(species__iexact=species)
 def search_keyword(request):
