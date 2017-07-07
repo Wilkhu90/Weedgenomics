@@ -128,6 +128,8 @@ def blastn_search(request):
     # check which database because each database has different names
     if database_name == 'Cyperus_esculentus':
         database = 'search/data/Poa_infirma/YNS_NewNames.fasta'
+    if database_name == 'Eleusine_indica':
+        database = 'search/data/Eleusine_indica/EleusineIndicaFinal.fasta'
     if database_name == 'Cyperus_rotundus':
         database = 'search/data/Poa_infirma/PNS_TrinityNewNames2.fasta'
     if database_name == 'Poa_annua_infirma':
