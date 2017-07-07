@@ -14,15 +14,18 @@ def index(request):
     context = {}
     return render(request, template, context)
 
+
 def main(request):
     template = "search/main.html"
     context = {}
     return render(request, template, context)
 
+
 def species(request):
     template = "search/species.html"
     context = {}
     return render(request, template, context)
+
 
 # Sequences.objects.exclude(gene_description__icontains=query).filter(species__iexact=species)
 def search_keyword(request):
@@ -127,6 +130,8 @@ def blastn_search(request):
     # check which database because each database has different names
     if database_name == 'Cyperus_esculentus':
         database = 'search/data/Cyperus_esculentus/YNS_NewNames.fasta'
+    if database_name == 'Eleusine_indica':
+        database = 'search/data/Eleusine_indica/EleusineIndicaFinal.fasta'
     if database_name == 'Cyperus_rotundus':
         database = 'search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta'
     if database_name == 'Poa_annua_infirma':
