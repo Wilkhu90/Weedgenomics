@@ -37,10 +37,10 @@
             </div>
             <div class="row">
               <div class="col-xs-2">
-                Match (<span id="mismatch"></span>)
+                Match (<span class="mismatch"></span>)
               </div>
               <div class="col-xs-10">
-                <p class="stretch" id="match">{{result.Hit_match}}</p>
+                <p class="stretch match">{{result.Hit_match}}</p>
               </div>
             </div>
             <div class="row">
@@ -80,15 +80,20 @@
 
 
     $(document).ready(function () {
-      var txt = $('#match').html();
       $('.stretch').each(function(){
           $(this).strech_text();
       });
-      var den = txt.split('').length;
-      var num = txt.split('|').length-1;
-      if(den != 0) {
-        $('#mismatch').html((num/den*100).toFixed(2)+'%');
-      }
+      $('.stretch.match').each(function(){
+          var txt = $(this).text();
+          var den = txt.split('').length;
+          var num = txt.split('-').length-1;
+          if(den != 0) {
+            console.log((num/den*100).toFixed(2)+'%');
+            console.log($(this).parent().parent().children()[0].children[0]);
+            var match = $(this).parent().parent().children()[0].children[0]
+            match.innerHTML = (num/den*100).toFixed(2)+'%';
+          }
+      });
     });
     </script>
     <br/>
