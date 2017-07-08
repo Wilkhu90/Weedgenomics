@@ -4,7 +4,7 @@ from . import views
 app_name = 'search'
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.main),
     url(r'^main/$', views.main, name='main'),
     url(r'^species/$', views.species, name='species'),
     url(r'^search_keyword/$', views.search_keyword, name='search_keyword'),
