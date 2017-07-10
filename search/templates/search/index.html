@@ -92,6 +92,15 @@
       else {
         $('#main').addClass('active');
       }
+
+      var images = ['http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/inflorescence-of-rabbitsfoot-clover.jpg',
+                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/stem-and-leaf.jpg',
+                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/plants-along-a-roadside-area.jpg',
+                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/close-up-of-infloresence-and-trifoliate-leaves.jpg'];
+
+      var index = Math.floor(Math.random()*images.length);
+      $('.header').css('background-image', 'url('+images[index]+')');
+
       </script>
     </body>
 
