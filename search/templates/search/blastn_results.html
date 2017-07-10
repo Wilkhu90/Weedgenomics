@@ -3,6 +3,11 @@
 {% load staticfiles %}
 
 {% block results %}
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Search Results for Sequence: "{{searchQuery.query}}" and Species: "{{searchQuery.species|title}}"</h4>
+      </div>
+    </div>
     {% if hits %}
 
     {% for result in hits %}

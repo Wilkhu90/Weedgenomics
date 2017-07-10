@@ -2,7 +2,7 @@ from Bio import pairwise2
 from Bio.Seq import Seq
 from django.http import Http404
 from django.shortcuts import render
-from .models import Sequences
+from .models import Sequences, herbiscide
 from django.http import HttpResponse
 from Bio.Blast.Applications import NcbiblastnCommandline
 from Bio.Blast import NCBIXML
@@ -34,7 +34,7 @@ def search_keyword(request):
     all_sequences = []
     if len(query) > 0:
         all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
-    context = {"results": all_sequences}
+    context = {"results": all_sequences, "searchQuery": { "query": query, "species": species}}
     template = "search/results.html"
     return render(request, template, context)
 
@@ -124,6 +124,7 @@ def download_file(request, seq_id):
 
 
 def blastn_search(request):
+    name = request.GET.get("query")
     database_name = request.GET.get("species")
     query = request.GET.get("query")
 
@@ -173,9 +174,21 @@ def blastn_search(request):
                              "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
                              "description": sequence.gene_description, "ID": sequence.id, "Hit_id": result.hit_id})
 
-    context = {"hits": hits}
+    context = {"hits": hits, "searchQuery": { "species": database_name, "query": name }}
     return render(request, "search/blastn_results.html", context)
 
 
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
+
+def herbiscide_search(request):
+    geneId= request.GET.get("geneId")
+    genus = request.GET.get("genus")
+
+    herbs = herbiscide.objects.filter(gene_id__iexact=geneId).filter(genus__iexact=genus)
+    context = {"results": herbs, "searchQuery": { "geneId": geneId, "genus": genus}}
+
+    return render(request, "search/herbiscide_results.html", context)
+
+def herbiscide_render(request):
+    return render(request, "search/herbiscide_search.html", {})
