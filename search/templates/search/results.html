@@ -18,11 +18,11 @@
       </thead>
         <tbody>
         {% for result in results %}
-        <tr>
+        <td>
           <th scope="row">{{forloop.counter}}</th>
           <td><a href="{% url 'search:detail' result.id %}">{{result.gene_description}}</a></td>
           <td><button type="button" class="btn btn-primary">BlastX</button></td>
-          <td><button type="button" class="btn btn-primary">BlastN</button></td>
+          <td><form method="get" action="{% url 'search:blast_at_ncbi' result.id %}"><button type="submit" class="btn btn-primary">BlastN</button></form></td>
           <td><button type="button" class="btn btn-primary">Local Blast</button></td>
           <td><a href="{% url 'search:download_fasta' result.id %}"> <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /> </a></td>
         </tr>
