@@ -1,0 +1,65 @@
+{% extends "search/index.html" %}
+
+{% block search %}
+
+<form role="search" method="get" action="{% url 'search:herbiscide_search' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <b>Gene Id:</b> <select class ="form-control"  name="geneId">
+            <option value="psbA">psbA</option>
+            <option value="ACCase">ACCase</option>
+            <option value="Acetolactate Synthase">Acetolactate Synthase</option>
+            <option value="Alpha or Beta tubulin">Alpha or Beta tubulin</option>
+            <option value="PPO">PPO</option>
+            <option value="Cyperus rotundus">Cyperus rotundus</option>
+            <option value="EPSP Synthase">EPSP Synthase</option>
+        </select>
+        <b>Genus:</b> <select class ="form-control"  name="genus">
+            <option value="Abutilon">Abutilon</option>
+            <option value="Allium">Allium</option>
+            <option value="Alopecurus">Alopecurus</option>
+            <option value="Amaranthus">Amaranthus</option>
+            <option value="Ambrosia">Ambrosia</option>
+            <option value="Avena">Avena</option>
+            <option value="Brachiaria">Brachiaria</option>
+            <option value="Bromus">Bromus</option>
+            <option value="Chamaesyce">Chamaesyce</option>
+            <option value="Conyza">Conyza</option>
+            <option value="Chenopodium">Chenopodium</option>
+            <option value="Crotalaria">Crotalaria</option>
+            <option value="Croton">Croton</option>
+            <option value="Cyperus">Cyperus</option>
+            <option value="Datura">Datura</option>
+            <option value="Digitaria">Digitaria</option>
+            <option value="Echinochloa">Echinochloa</option>
+            <option value="Eleusine">Eleusine</option>
+            <option value="Euphorbia">Euphorbia</option>
+            <option value="Ipomoea">Ipomoea</option>
+            <option value="Lolium">Lolium</option>
+            <option value="Oryza">Oryza</option>
+            <option value="Oxalis">Oxalis</option>
+            <option value="Panicum">Panicum</option>
+            <option value="Paspalum">Paspalum</option>
+            <option value="Passiflora">Passiflora</option>
+            <option value="Plantago">Plantago</option>
+            <option value="Poa">Poa</option>
+            <option value="Polygonum">Polygonum</option>
+            <option value="Portulaca">Portulaca</option>
+            <option value="Pueraria">Pueraria</option>
+            <option value="Sesbania">Sesbania</option>
+            <option value="Setaria">Setaria</option>
+            <option value="Sida">Sida</option>
+            <option value="Solanum">Solanum</option>
+            <option value="Stellaria">Stellaria</option>
+            <option value="Trifolium">Trifolium</option>
+            <option value="Viola">Viola</option>
+            <option value="Xanthium">Xanthium</option>
+        </select>
+
+    <br/><br/><button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form><br/>
+
+{% block results %} {% endblock %}
+
+{% endblock %}

@@ -18,7 +18,7 @@
   background-attachment: fixed;
   margin-top: 50px;
 }
-.header a:hover {
+.logo a:hover {
   text-decoration: none;
 }
 .header h1 {
@@ -30,18 +30,21 @@
   cursor: pointer;
   width: 40px;
 }
-.header h2 {
-  vertical-align: bottom;
-  color: Black;
+.logo a{
+  color: white;
   font-size:30px;
-  font-family: monospace;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   cursor: pointer;
-  margin-top: -10px;
-  padding-left: 20px;
+}
+.logo {
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  padding-top: 80px;
 }
 .header img {
-  height: 100px;
-  width: 200px;
+  height: 180px;
+  width: 330px;
   border-radius: 20px;
   margin-top: 50px;
   margin-left: 10px;

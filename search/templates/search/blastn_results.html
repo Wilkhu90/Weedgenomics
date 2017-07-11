@@ -3,6 +3,11 @@
 {% load staticfiles %}
 
 {% block results %}
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Search Results for Sequence: "{{searchQuery.query}}" and Species: "{{searchQuery.species|title}}"</h4>
+      </div>
+    </div>
     {% if hits %}
 
     {% for result in hits %}
@@ -28,26 +33,26 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-1">
+              <div class="col-xs-2">
                 Query
               </div>
-              <div class="col-xs-11">
+              <div class="col-xs-10">
                 <p class="stretch">{{result.Hit_query}}</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-1">
-
+              <div class="col-xs-2">
+                Match (<span class="mismatch"></span>)
               </div>
-              <div class="col-xs-11">
-                <p class="stretch">{{result.Hit_match}}</p>
+              <div class="col-xs-10">
+                <p class="stretch match">{{result.Hit_match}}</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-1">
+              <div class="col-xs-2">
                 Subject
               </div>
-              <div class="col-xs-11">
+              <div class="col-xs-10">
                 <p class="stretch">{{result.Hit_sbject}}</p>
               </div>
             </div>
@@ -59,12 +64,11 @@
     $.fn.strech_text = function(){
       var elmt          = $(this),
           cont_width    = elmt.width(),
-          txt           = elmt.html(),
+          txt           = elmt.html().replace(/ /g, 'X').replace(/\|/g, '-'),
           one_line      = $('<span class="stretch_it">' + txt + '</span>'),
           nb_char       = elmt.text().length,
           spacing       = cont_width/nb_char,
           txt_width;
-
       elmt.html(one_line);
       txt_width = one_line.width();
 
@@ -83,6 +87,17 @@
     $(document).ready(function () {
       $('.stretch').each(function(){
           $(this).strech_text();
+      });
+      $('.stretch.match').each(function(){
+          var txt = $(this).text();
+          var den = txt.split('').length;
+          var num = txt.split('-').length-1;
+          if(den != 0) {
+            console.log((num/den*100).toFixed(2)+'%');
+            console.log($(this).parent().parent().children()[0].children[0]);
+            var match = $(this).parent().parent().children()[0].children[0]
+            match.innerHTML = (num/den*100).toFixed(2)+'%';
+          }
       });
     });
     </script>
