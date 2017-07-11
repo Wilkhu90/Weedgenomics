@@ -5,8 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/tempfiles/query.fasta" afterPath="$PROJECT_DIR$/search/tempfiles/query.fasta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/tempfiles/search.xml" afterPath="$PROJECT_DIR$/search/tempfiles/search.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/templates/search/results.html" afterPath="$PROJECT_DIR$/search/templates/search/results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/urls.py" afterPath="$PROJECT_DIR$/search/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/views.py" afterPath="$PROJECT_DIR$/search/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,8 +102,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="175" column="33" lean-forward="true" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
+            <state relative-caret-position="612">
+              <caret line="177" column="21" lean-forward="true" selection-start-line="177" selection-start-column="21" selection-end-line="177" selection-end-column="21" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -521,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499450447976</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Completed blast search at Ncbi&#10;Completed the query validation">
+      <created>1499777882182</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1499777882182</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -588,7 +593,8 @@
     <MESSAGE value="added new html files and view" />
     <MESSAGE value="updated bastn view" />
     <MESSAGE value="Modified blastn search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified blastn search" />
+    <MESSAGE value="Completed blast search at Ncbi&#10;Completed the query validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed blast search at Ncbi&#10;Completed the query validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -965,8 +971,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="175" column="33" lean-forward="true" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
+        <state relative-caret-position="612">
+          <caret line="177" column="21" lean-forward="true" selection-start-line="177" selection-start-column="21" selection-end-line="177" selection-end-column="21" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

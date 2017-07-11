@@ -174,4 +174,8 @@ def validate_and_replace(sequence):
         if sequence[s] not in sequence_list:
             if sequence[s] not in lower_seq:
                 sequence[s] = '#'
-    return ''.join(sequence)
+    # blank replacement
+    new_sequence = []
+    for s in range(0, len(sequence)):
+        if sequence[s] != ' ':new_sequence.append(sequence[s])
+    return ''.join(new_sequence)
