@@ -6,6 +6,7 @@ from .models import Sequences, herbiscide
 from django.http import HttpResponse
 from Bio.Blast.Applications import NcbiblastnCommandline
 from Bio.Blast import NCBIXML
+from Bio.Blast import NCBIWWW
 import tempfile
 
 
@@ -46,38 +47,6 @@ def detail(request, contig_id):
         raise Http404("Sequence Does Not Exist")
     context = {"sequence": sequence}
     template = "search/details.html"
-    return render(request, template, context)
-
-
-def search_sequence(request):
-    seq_query = request.GET.get("seq_query")
-    threshold = request.GET.get("threshold")
-    species = request.GET.get("species")
-    keyword = request.GET.get("keyword")
-    all_sequences = Sequences.objects.all()
-    count = 0
-    total = len(all_sequences)
-
-    if threshold == "None":
-        threshold = len(seq_query)*2
-    hit_list = []
-    print("searching")
-    for sequence in all_sequences:
-        count += 1
-        inc = int(total/100)
-        if count % inc == 0:
-            print(str(int((count/total)*100))+' % completed')
-        if sequence.species == species and keyword in sequence.gene_description:
-            record = Seq(sequence.sequence)
-            alignments = pairwise2.align.localms(record, seq_query, 2, -2, -1, -0.5)
-            for alignment in alignments:
-                if alignment[2] == threshold:
-                    # change to sequence based on the results returned
-                    hit_list.append(sequence)
-                    break
-
-    context = {"hit_list": hit_list}
-    template = "search/sequence_results.html"
     return render(request, template, context)
 
 
@@ -127,7 +96,8 @@ def blastn_search(request):
     name = request.GET.get("query")
     database_name = request.GET.get("species")
     query = request.GET.get("query")
-
+    query = validate_and_replace(query)
+    print(query)
     # check which database because each database has different names
     if database_name == 'Cyperus_esculentus':
         database = 'search/data/Cyperus_esculentus/YNS_NewNames.fasta'
@@ -178,8 +148,37 @@ def blastn_search(request):
     return render(request, "search/blastn_results.html", context)
 
 
+def blast_at_ncbi(request, seq_id):
+    query_sequence = Sequences.objects.get(pk=seq_id)
+    result_handle = NCBIWWW.qblast("blastn", "nt", query_sequence.sequence)
+    blast_records = NCBIXML.read(result_handle)
+    results = blast_records.alignments
+    hits = []
+    for result in results:
+        for hit in result.hsps:
+            hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
+                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
+                         "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
+    context = {"hits": hits}
+    return render(request, "search/blastn_results.html", context)
+
+
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
+
+def validate_and_replace(sequence):
+    sequence = list(sequence)
+    sequence_list = ['A', 'C', 'G', 'T', 'U', 'W', 'S', 'M', 'K', 'R', 'Y', 'B', 'D', 'H', 'V', 'N', 'Z']
+    lower_seq = list(map(lambda a: a.lower(), sequence_list))
+    for s in range(0, len(sequence)):
+        if sequence[s] not in sequence_list:
+            if sequence[s] not in lower_seq:
+                sequence[s] = '#'
+    # blank replacement
+    new_sequence = []
+    for s in range(0, len(sequence)):
+        if sequence[s] != ' ':new_sequence.append(sequence[s])
+    return ''.join(new_sequence)
 
 def herbiscide_search(request):
     geneId= request.GET.get("geneId")
