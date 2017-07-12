@@ -1,5 +1,3 @@
-from Bio import pairwise2
-from Bio.Seq import Seq
 from django.http import Http404
 from django.shortcuts import render
 from .models import Sequences, herbiscide
@@ -7,6 +5,9 @@ from django.http import HttpResponse
 from Bio.Blast.Applications import NcbiblastnCommandline
 from Bio.Blast import NCBIXML
 from Bio.Blast import NCBIWWW
+from django.core.mail import send_mail
+from .forms import ContactForm
+from django.conf import settings
 import tempfile
 
 
@@ -176,6 +177,7 @@ def blast_at_ncbi(request, seq_id):
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
 
+
 def validate_and_replace(sequence):
     sequence = list(sequence)
     sequence_list = ['A', 'C', 'G', 'T', 'U', 'W', 'S', 'M', 'K', 'R', 'Y', 'B', 'D', 'H', 'V', 'N', 'Z']
@@ -190,6 +192,28 @@ def validate_and_replace(sequence):
         if sequence[s] != ' ':new_sequence.append(sequence[s])
     return ''.join(new_sequence)
 
+
+# contact the admin of the site
+def contact(request):
+    form = ContactForm(request.POST or None)
+    template = 'music/contact.html'
+    message = None
+
+    if form.is_valid():
+        name = form.cleaned_data['name']
+        comment = form.cleaned_data['comment']
+        subject = 'Website Email'
+        message = comment + ' ' + name
+        email_from = form.cleaned_data['email']
+        email_to = [settings.EMAIL_HOST_USER]
+        send_mail(subject, message, email_from, email_to, fail_silently=True)
+        message = 'Your message has been received, I will get back to you soon! Thanks!'
+        form = ContactForm(request.GET)
+
+    context = {'form': form, 'message': message}
+    return render(request, template, context)
+
+
 def herbiscide_search(request):
     geneId= request.GET.get("geneId")
     genus = request.GET.get("genus")
@@ -198,6 +222,7 @@ def herbiscide_search(request):
     context = {"results": herbs, "searchQuery": { "geneId": geneId, "genus": genus}}
 
     return render(request, "search/herbiscide_results.html", context)
+
 
 def herbiscide_render(request):
     return render(request, "search/herbiscide_search.html", {})
