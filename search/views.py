@@ -196,7 +196,7 @@ def validate_and_replace(sequence):
 # contact the admin of the site
 def contact(request):
     form = ContactForm(request.POST or None)
-    template = 'music/contact.html'
+    template = 'search/contact.html'
     message = None
 
     if form.is_valid():
