@@ -17,6 +17,7 @@
   position: relative;
   background-attachment: fixed;
   margin-top: 50px;
+  padding-top: 80px;
 }
 .logo a:hover {
   text-decoration: none;
@@ -32,15 +33,16 @@
 }
 .logo a{
   color: white;
-  font-size:30px;
-  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size:50px;
+  font-family: "Josefin Slab";
   cursor: pointer;
 }
 .logo {
-  width: 400px;
+  width: 600px;
   text-align: center;
   margin: auto;
-  padding-top: 80px;
+  background-color: darkolivegreen;
+  border-radius: 10px;
 }
 .header img {
   height: 180px;

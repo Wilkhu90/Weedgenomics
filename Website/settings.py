@@ -31,7 +31,7 @@ SECRET_KEY = 'pl-azwm1l#$-#h+hw#75n_ra-lsay4i4#g=k_5^*h!vd^50_p*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','weedgenomics-dev.us-east-1.elasticbeanstalk.com', 'www.weedgenomics.com', 'weedgenomics.com']
+ALLOWED_HOSTS = ['localhost','weedgenomics-dev.us-east-1.elasticbeanstalk.com', 'www.weedgenomics.com', 'weedgenomics.com', 'www.weedgenomics.net', 'weedgenomics.net', 'www.weedgenomics.org', 'weedgenomics.org']
 
 
 # Application definition

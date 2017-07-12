@@ -7,6 +7,8 @@ urlpatterns = [
     url(r'^$', views.main),
     url(r'^main/$', views.main, name='main'),
     url(r'^species/$', views.species, name='species'),
+    url(r'^team/$', views.team, name='team'),
+    url(r'^contact/$', views.contact, name='contact'),
     url(r'^search_keyword/$', views.search_keyword, name='search_keyword'),
     url(r'^search_keyword_render/$', views.search_keyword_render, name='search_keyword_render'),
     url(r'^search_sequence_render/$', views.search_sequence_render, name='search_sequence_render'),
