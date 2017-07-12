@@ -4,8 +4,17 @@
 
 <form role="search" method="get" action="{% url 'search:herbiscide_search' %}">
     {% csrf_token %}
-    <div class="form-group">
-        <b>Gene Id:</b> <select class ="form-control"  name="geneId">
+    <div class="row">
+      <div class="col-xs-6">
+          <b>Gene Id:</b>
+      </div>
+      <div class="col-xs-6">
+          <b>Genus:</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <select class ="form-control"  name="geneId">
             <option value="psbA">psbA</option>
             <option value="ACCase">ACCase</option>
             <option value="Acetolactate Synthase">Acetolactate Synthase</option>
@@ -14,7 +23,9 @@
             <option value="Cyperus rotundus">Cyperus rotundus</option>
             <option value="EPSP Synthase">EPSP Synthase</option>
         </select>
-        <b>Genus:</b> <select class ="form-control"  name="genus">
+      </div>
+      <div class="col-xs-6">
+        <select class ="form-control"  name="genus">
             <option value="Abutilon">Abutilon</option>
             <option value="Allium">Allium</option>
             <option value="Alopecurus">Alopecurus</option>
@@ -55,8 +66,14 @@
             <option value="Viola">Viola</option>
             <option value="Xanthium">Xanthium</option>
         </select>
-
-    <br/><br/><button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+    <br/>
+    <div class="form-inline">
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </div>
     </div>
 </form><br/>
 
