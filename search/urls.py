@@ -19,5 +19,4 @@ urlpatterns = [
     url(r'^blastn_ncbi/(?P<seq_id>[0-9]+)/$', views.blast_at_ncbi, name='blast_at_ncbi'),
     url(r'^herbiscide_search/$', views.herbiscide_search, name='herbiscide_search'),
     url(r'^herbiscide_render/$', views.herbiscide_render, name='herbiscide_render'),
-    url(r'^contact/$', views.contact, name='contact'),
 ]
