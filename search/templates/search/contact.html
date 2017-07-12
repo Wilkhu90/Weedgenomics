@@ -1,4 +1,6 @@
-{% block bodydata %}
+{% extends "search/index.html" %}
+
+{% block search %}
     <div class="container-fluid">
         <div class="row">
 
@@ -8,7 +10,7 @@
 
                         <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {% include 'music/form-template.html' %}
+                            {% include 'search/form_template.html' %}
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-success">Submit</button>
