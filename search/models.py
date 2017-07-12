@@ -26,6 +26,7 @@ class Species(models.Model):
         db_table = 'species'
         unique_together = (('id', 'name'),)
 
+
 class herbiscide(models.Model):
     gene_id = models.CharField(max_length=128)
     genus = models.CharField(max_length=128)
