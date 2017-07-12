@@ -43,6 +43,12 @@
               <li><a href="{% url 'search:herbiscide_render' %}">Herbicide Resistance Search</a></li>
             </ul>
           </li>
+          <li id="team">
+            <a href="/search/team">Team</span></a>
+          </li>
+          <li id="contact">
+            <a href="/search/contact">Contact</span></a>
+          </li>
           <li class="dropdown" id="others">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Link(s) <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -86,6 +92,12 @@
       else if(loc.includes('species')) {
         $('#species').addClass('active');
       }
+      else if(loc.includes('contact')) {
+        $('#contact').addClass('active');
+      }
+      else if(loc.includes('team')) {
+        $('#team').addClass('active');
+      }
       else if(loc.includes('search')) {
         $('#tools').addClass('active');
       }
@@ -93,10 +105,10 @@
         $('#main').addClass('active');
       }
 
-      var images = ['http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/inflorescence-of-rabbitsfoot-clover.jpg',
-                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/stem-and-leaf.jpg',
-                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/plants-along-a-roadside-area.jpg',
-                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/close-up-of-infloresence-and-trifoliate-leaves.jpg'];
+      var images = ['http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/close-up-of-infloresence-and-trifoliate-leaves.jpg',
+                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/general1.jpg',
+                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/leaf-close-up-note-waxy-leaf-appearance-similar-to-other-commelineaceae-family-plants.jpg',
+                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/leaf-characteristics.jpg'];
 
       var index = Math.floor(Math.random()*images.length);
       $('.header').css('background-image', 'url('+images[index]+')');

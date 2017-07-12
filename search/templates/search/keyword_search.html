@@ -5,15 +5,29 @@
 <form role="search" method="get" action="{% url 'search:search_keyword' %}">
     {% csrf_token %}
     <div class="form-group">
-        <b>Keyword:</b><input type="text" class ="form-control" name="query" value="">
-        <b>Species:&nbsp</b><select class ="form-control" name="species">
-            <option value="Poa infirma">Poa infirma</option>
-            <option value="Poa supina">Poa supina</option>
-            <option value="Poa annua-infirma homeolog">Poa annua-infirma homeolog</option>
-            <option value="Poa annua-supina homeolog">Poa annua-supina homeolog</option>
-            <option value="Eleusine indica">Eleusine indica</option>
-        </select>
-    <br/><br/>
+      <div class="row">
+        <div class="col-xs-6">
+          <b>Keyword:</b>
+        </div>
+        <div class="col-xs-6">
+          <b>Species:</b>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="text" class ="form-control" name="query" value="">
+        </div>
+        <div class="col-xs-6">
+          <select class ="form-control" name="species">
+              <option value="Poa infirma">Poa infirma</option>
+              <option value="Poa supina">Poa supina</option>
+              <option value="Poa annua-infirma homeolog">Poa annua-infirma homeolog</option>
+              <option value="Poa annua-supina homeolog">Poa annua-supina homeolog</option>
+              <option value="Eleusine indica">Eleusine indica</option>
+          </select>
+        </div>
+      </div>
+    <br/>
     <button type="submit" class="btn btn-primary">Search</button>
   </div>
 </form>
