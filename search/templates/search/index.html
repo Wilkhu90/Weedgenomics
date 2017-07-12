@@ -30,10 +30,10 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active" id="main">
-            <a href="/search/main">Home</span></a>
+            <a href="/main">Home</span></a>
           </li>
           <li id="species">
-            <a href="/search/species">Assembled Species</span></a>
+            <a href="/species">Assembled Species</span></a>
           </li>
           <li class="dropdown" id="tools">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
@@ -43,11 +43,16 @@
               <li><a href="{% url 'search:herbiscide_render' %}">Herbicide Resistance Search</a></li>
             </ul>
           </li>
-          <li id="team">
-            <a href="/search/team">Team</span></a>
-          </li>
-          <li id="contact">
-            <a href="/search/contact">Contact</span></a>
+          <li class="dropdown" id="about">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li id="team">
+                <a href="/team">Team</span></a>
+              </li>
+              <li id="contact">
+                <a href="/contact">Contact</span></a>
+              </li>
+            </ul>
           </li>
           <li class="dropdown" id="others">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Link(s) <span class="caret"></span></a>
@@ -66,7 +71,7 @@
     </div><!-- /.container-fluid -->
   </nav>
   <div class="header">
-      <div class="logo"><a href="/search/main">Repository of Weed Species Genomic Information</a></div>
+      <div class="logo"><a href="/main">Repository of Weed Species Genomic Information</a></div>
   </div>
   <br/>
   <div class="container">
@@ -93,10 +98,10 @@
         $('#species').addClass('active');
       }
       else if(loc.includes('contact')) {
-        $('#contact').addClass('active');
+        $('#about').addClass('active');
       }
       else if(loc.includes('team')) {
-        $('#team').addClass('active');
+        $('#about').addClass('active');
       }
       else if(loc.includes('search')) {
         $('#tools').addClass('active');
