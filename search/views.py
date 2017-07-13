@@ -42,7 +42,7 @@ def search_keyword(request):
     all_sequences = []
     if len(query) > 0:
         all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
-    context = {"results": all_sequences, "searchQuery": { "query": query, "species": species}}
+    context = {"results": all_sequences, "searchQuery": {"query": query, "species": species}}
     template = "search/results.html"
     return render(request, template, context)
 
