@@ -154,7 +154,7 @@ def blastn_search(request):
     return render(request, "search/blastn_results.html", context)
 
 
-def blast_at_ncbi(request, seq_id):
+def blastn_at_ncbi(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     result_handle = NCBIWWW.qblast("blastn", "nt", query_sequence.sequence)
     blast_records = NCBIXML.read(result_handle)
@@ -207,6 +207,24 @@ def contact(request):
 
     context = {'form': form, 'message': message}
     return render(request, template, context)
+
+
+# protein search at ncbi
+def blastx_at_ncbi(request, seq_id):
+    query_sequence = Sequences.objects.get(pk=seq_id)
+    result_handle = NCBIWWW.qblast("blastx", "nt", query_sequence.sequence)
+    blast_records = NCBIXML.read(result_handle)
+    results = blast_records.alignments
+    hits = []
+    for result in results:
+        for hit in result.hsps:
+            hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
+                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
+                         "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
+    context = {"hits": hits}
+
+    # change to new html page if needed later
+    return render(request, "search/blastn_results.html", context)
 
 
 def herbiscide_search(request):
