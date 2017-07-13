@@ -16,8 +16,8 @@
         <tr>
           <th class="row">
             <div class="col-xs-3">{{forloop.counter}}. <a href="{% url 'search:download_fasta' result.id %}">Download  <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /></a></div>
-            <div class="col-xs-3"><button type="button" class="btn btn-primary">BlastX</button></div>
-            <div class="col-xs-3"><form method="get" action="{% url 'search:blast_at_ncbi' result.id %}"><button type="submit" class="btn btn-primary">BlastN</button></form></div>
+            <div class="col-xs-3"><form method="get" action="{% url 'search:blastx_at_ncbi' result.id %}"><button type="submit" class="btn btn-primary">BlastX</button></form></div>
+            <div class="col-xs-3"><form method="get" action="{% url 'search:blastn_at_ncbi' result.id %}"><button type="submit" class="btn btn-primary">BlastN</button></form></div>
             <div class="col-xs-3"><button type="button" class="btn btn-primary">Local Blast</button></div>
           </th>
         </tr>
