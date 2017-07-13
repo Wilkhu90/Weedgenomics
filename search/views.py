@@ -28,13 +28,14 @@ def species(request):
     context = {}
     return render(request, template, context)
 
+
 def team(request):
     template = "search/team.html"
     context = {}
     return render(request, template, context)
 
 
-# Sequences.objects.exclude(gene_description__icontains=query).filter(species__iexact=species)
+# Sequences.objects.exclude(gene_description__icontains = query).filter(species__iexact=species)
 def search_keyword(request):
     query = request.GET.get("query")
     species = request.GET.get("species")
@@ -150,8 +151,9 @@ def blastn_search(request):
                              "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
                              "description": sequence.gene_description, "ID": sequence.id, "Hit_id": result.hit_id})
 
-    context = {"hits": hits, "searchQuery": { "species": database_name, "query": name }}
-    return render(request, "search/blastn_results.html", context)
+    context = {"hits": hits, "searchQuery": { "species": database_name, "query": name}}
+    template = "search/blastn_results.html"
+    return render(request, template, context)
 
 
 def blastn_at_ncbi(request, seq_id):
@@ -166,7 +168,8 @@ def blastn_at_ncbi(request, seq_id):
                          "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     context = {"hits": hits}
-    return render(request, "search/blastn_results.html", context)
+    template = "search/blastn_results.html"
+    return render(request, template, context)
 
 
 def blastn_render(request):
@@ -224,7 +227,8 @@ def blastx_at_ncbi(request, seq_id):
     context = {"hits": hits}
 
     # change to new html page if needed later
-    return render(request, "search/blastn_results.html", context)
+    template = "search/blastn_results.html"
+    return render(request, template, context)
 
 
 def herbiscide_search(request):
@@ -232,10 +236,12 @@ def herbiscide_search(request):
     genus = request.GET.get("genus")
 
     herbs = herbiscide.objects.filter(gene_id__iexact=geneId).filter(genus__iexact=genus)
-    context = {"results": herbs, "searchQuery": { "geneId": geneId, "genus": genus}}
+    context = {"results": herbs, "searchQuery": {"geneId": geneId, "genus": genus}}
 
-    return render(request, "search/herbiscide_results.html", context)
+    template = "search/herbiscide_results.html"
+    return render(request, template, context)
 
 
 def herbiscide_render(request):
-    return render(request, "search/herbiscide_search.html", {})
+    template = "search/herbiscide_search.html"
+    return render(request, template, {})
