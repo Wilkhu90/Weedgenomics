@@ -2,13 +2,28 @@
 
 {% block search %}
 
-<div>
-  <p>Welcome to the Weed Genomic Data Repository- an online repository of genomic and transcriptomic information for weed species.
+<div class="row">
+  <div class="col-xs-4">
+      <div class="row">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+      </div>
+      <div class="row">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+      </div>
+      <div class="row">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+      </div>
+  </div>
+  <div class="col-xs-5">
+  <p style="text-align:justify">Welcome to the Weed Genomic Data Repository- an online repository of genomic and transcriptomic information for weed species.
     The repository is updated on a regular basis in include information for new weed species.
     The repository currently allows for searching assembled transcriptomes via annotation keywords or nucleic acid strings.
     Results can be downloaded as text files in fasta format.
     A separate repository of genes associated with target site resistance to herbicide for economically important weed species
     is also available.  These sequences were acquired from the NCBI Nucleotide database.</p>
+  </div>
+  <div class="col-xs-3">
+  </div>
 </div>
 
 {% block results %} {% endblock %}
