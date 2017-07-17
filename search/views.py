@@ -9,6 +9,7 @@ from django.core.mail import send_mail
 from .forms import ContactForm
 from django.conf import settings
 import tempfile
+import os
 
 
 def index(request):
@@ -151,7 +152,7 @@ def blastn_search(request):
                              "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
                              "description": sequence.gene_description, "ID": sequence.id, "Hit_id": result.hit_id})
 
-    context = {"hits": hits, "searchQuery": { "species": database_name, "query": name}}
+    context = {"hits": hits, "searchQuery": {"species": database_name, "query": name}}
     template = "search/blastn_results.html"
     return render(request, template, context)
 
@@ -201,9 +202,13 @@ def contact(request):
         name = form.cleaned_data['name']
         comment = form.cleaned_data['comment']
         subject = 'Website Email'
-        message = comment + ' ' + name
         email_from = form.cleaned_data['email']
         email_to = [settings.EMAIL_HOST_USER]
+        message = comment + '\n\nby \n\n' + name + '\nemail: '+email_from
+
+        # password obtained from environment variable
+        settings.EMAIL_HOST_PASSWORD = os.environ['Web_password']
+
         send_mail(subject, message, email_from, email_to, fail_silently=True)
         message = 'Your message has been received, I will get back to you soon! Thanks!'
         form = ContactForm(request.GET)
