@@ -116,4 +116,6 @@
 }
 body {
   background: transparent url("images/exclusive_paper.png");
+  font-family: "Josefin Slab";
+  font-size: 1.6em;
 }
