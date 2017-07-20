@@ -102,6 +102,9 @@ def download_file(request, seq_id):
 
 def blastn_search(request):
     name = request.GET.get("query")
+    # evalue of search given by user
+    threshold = request.GET.get("threshold")
+    threshold = float(threshold)
     database_name = request.GET.get("species")
     query = request.GET.get("query")
     query = validate_and_replace(query)
@@ -134,7 +137,7 @@ def blastn_search(request):
         query = "search/tempfiles/query.fasta"
         output = "search/tempfiles/search.xml"
 
-        cline_blast = NcbiblastnCommandline(query=query, db=database, evalue=0.00001, outfmt=5, out=output)
+        cline_blast = NcbiblastnCommandline(query=query, db=database, evalue=threshold, outfmt=5, out=output)
         stdout, stderr = cline_blast()
 
         # read output file
