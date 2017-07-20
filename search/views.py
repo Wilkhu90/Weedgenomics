@@ -200,11 +200,13 @@ def contact(request):
 
     if form.is_valid():
         name = form.cleaned_data['name']
+        affiliation = form.cleaned_data['affiliation']
+        position = form.cleaned_data['position']
         comment = form.cleaned_data['comment']
         subject = 'Website Email'
         email_from = form.cleaned_data['email']
         email_to = [settings.EMAIL_HOST_USER]
-        message = comment + '\n\nby \n\n' + name + '\nemail: '+email_from
+        message = comment + '\n\nby \n\n' + name + '\nemail: '+email_from+'\naffiliation: '+affiliation+'\nposition: '+position
 
         # password obtained from environment variable
         settings.EMAIL_HOST_PASSWORD = os.environ['Web_password']
