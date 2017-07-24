@@ -10,6 +10,7 @@ from .forms import ContactForm
 from django.conf import settings
 import tempfile
 import os
+import requests
 
 def index(request):
     template = "search/index.html"
@@ -19,9 +20,9 @@ def index(request):
 
 def main(request):
     template = "search/main.html"
-    res = []
+    r = requests.get('https://scholar.google.com/scholar?q=herbicide+resistance&btnG=&hl=en&scisbd=1&as_sdt=0%2C1')
 
-    context = {"articles": res}
+    context = {"articles": r.text}
     return render(request, template, context)
 
 

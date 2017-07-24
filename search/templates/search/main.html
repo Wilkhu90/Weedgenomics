@@ -80,18 +80,23 @@
               <th>Recent Articles</th>
             </tr>
           </thead>
-          <tbody>
-            {% for article in articles %}
-            <tr>
-              <td><a href="{{article.link}}">{{article.name}}</a></td>
-            </tr>
-            {% endfor %}
+          <tbody id="articles">
+
           </tbody>
       </table>
     </div>
   </div>
 </div>
-
+<div id="htmlId" style="display:none;">{{articles |safe}}</div>
+<script>
+  var article = document.getElementById('htmlId');
+  var articles = document.getElementsByClassName('gs_rt');
+  console.log(articles);
+  for(var i=0; i<articles.length; i++) {
+    $("#articles").append("<tr><td><a href='"+ articles[i].firstChild.href +"'>"+ articles[i].innerText +"</a></td></tr>");
+  }
+  article.removeChild(articles);
+</script>
 {% block results %} {% endblock %}
 
 {% endblock %}
