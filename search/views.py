@@ -10,6 +10,8 @@ from .forms import ContactForm
 from django.conf import settings
 import tempfile
 import os
+from bs4 import BeautifulSoup
+import scholar
 
 
 def index(request):
@@ -20,7 +22,17 @@ def index(request):
 
 def main(request):
     template = "search/main.html"
-    context = {}
+    html = scholar.main()
+    soup = BeautifulSoup(html, 'html.parser')
+    articles = soup.find_all('h3');
+    res = []
+    for article in articles:
+        aa = article.find_all('a', href=True)
+        ahref = aa[0]
+        ans = {"name": ahref.text, "link": ahref['href']}
+        res.append(ans)
+
+    context = {"articles": res}
     return render(request, template, context)
 
 

@@ -1,7 +1,6 @@
 {% extends "search/index.html" %}
 
 {% block search %}
-
 <div class="row">
   <div class="col-xs-9">
     <div class="row">
@@ -70,7 +69,7 @@
             </tr>
           </thead>
           <tbody id="news">
-            
+
           </tbody>
       </table>
     </div>
@@ -82,18 +81,12 @@
             </tr>
           </thead>
           <tbody>
+            {% for article in articles %}
             <tr>
-              <td>Article 1</td>
+              <td><a href="{{article.link}}">{{article.name}}</a></td>
             </tr>
-            <tr>
-              <td>Article 1</td>
-            </tr>
-            <tr>
-              <td>Article 1</td>
-            </tr>
-            <tr>
-              <td>Article 1</td>
-            </tr>
+            {% endfor %}
+          </tbody>
       </table>
     </div>
   </div>
