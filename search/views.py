@@ -10,7 +10,6 @@ from .forms import ContactForm
 from django.conf import settings
 import tempfile
 import os
-import scholar
 
 def index(request):
     template = "search/index.html"
