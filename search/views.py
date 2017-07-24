@@ -20,7 +20,7 @@ def index(request):
 
 def main(request):
     template = "search/main.html"
-    r = requests.get('https://scholar.google.com/scholar?q=herbicide+resistance&btnG=&hl=en&scisbd=1&as_sdt=0%2C1')
+    r = requests.get('http://scholar.google.com/scholar?q=herbicide+resistance&btnG=&hl=en&scisbd=1&as_sdt=0%2C1')
 
     context = {"articles": r.text}
     return render(request, template, context)
