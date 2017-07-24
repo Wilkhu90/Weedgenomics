@@ -36,7 +36,7 @@
       <Hsp_num>1</Hsp_num>
       <Hsp_bit-score>82.3729</Hsp_bit-score>
       <Hsp_score>44</Hsp_score>
-      <Hsp_evalue>1.6779e-016</Hsp_evalue>
+      <Hsp_evalue>1.6779e-16</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>44</Hsp_query-to>
       <Hsp_hit-from>1</Hsp_hit-from>
