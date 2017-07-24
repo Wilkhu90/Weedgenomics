@@ -19,7 +19,6 @@ def index(request):
 
 def main(request):
     template = "search/main.html"
-    html = scholar.main()
     res = []
 
     context = {"articles": res}
