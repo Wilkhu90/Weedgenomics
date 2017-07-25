@@ -212,7 +212,8 @@ def contact(request):
         message = comment + '\n\nby \n\n' + name + '\nemail: '+email_from+'\naffiliation: '+affiliation+'\nposition: '+position
 
         # password obtained from environment variable
-        settings.EMAIL_HOST_PASSWORD = os.environ['Web_password']
+        # settings.EMAIL_HOST_PASSWORD = os.environ['Web_password']
+        settings.EMAIL_HOST_PASSWORD = 'Herbs@123'
 
         send_mail(subject, message, email_from, email_to, fail_silently=True)
         message = 'Your message has been received, I will get back to you soon! Thanks!'
@@ -225,7 +226,7 @@ def contact(request):
 # protein search at ncbi
 def blastx_at_ncbi(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
-    result_handle = NCBIWWW.qblast("blastx", "nt", query_sequence.sequence)
+    result_handle = NCBIWWW.qblast("blastx", "nr", query_sequence.sequence)
     blast_records = NCBIXML.read(result_handle)
     results = blast_records.alignments
     hits = []
