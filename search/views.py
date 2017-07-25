@@ -34,6 +34,10 @@ def team(request):
     context = {}
     return render(request, template, context)
 
+def sponsor(request):
+    template = "search/sponsor.html"
+    context = {}
+    return render(request, template, context)
 
 # Keyword search
 def search_keyword(request):
