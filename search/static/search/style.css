@@ -125,3 +125,7 @@ body {
     height: 300px;
     overflow-y: scroll;
 }
+.media-body {
+  background: white;
+  border-radius: 10px;
+}

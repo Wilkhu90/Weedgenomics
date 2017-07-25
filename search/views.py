@@ -34,6 +34,10 @@ def team(request):
     context = {}
     return render(request, template, context)
 
+def sponsor(request):
+    template = "search/sponsor.html"
+    context = {}
+    return render(request, template, context)
 
 # Sequences.objects.exclude(gene_description__icontains = query).filter(species__iexact=species)
 def search_keyword(request):
