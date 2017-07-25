@@ -54,6 +54,9 @@
               </li>
             </ul>
           </li>
+          <li id="sponsor">
+            <a href="/sponsor">Sponsor</span></a>
+          </li>
           <li class="dropdown" id="others">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Link(s) <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -84,6 +87,24 @@
     <p>© 2017 Copyright: <a href=""> Weed Genomics </a></p>
   </div>
 </div>
+<script>
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
       <script>
       /*
       Script for setting active item in the Navigation bar
@@ -106,6 +127,9 @@
       else if(loc.includes('search')) {
         $('#tools').addClass('active');
       }
+      else if(loc.includes('sponsor')) {
+        $('#sponsor').addClass('active');
+      }
       else {
         $('#main').addClass('active');
       }
@@ -118,6 +142,39 @@
       var index = Math.floor(Math.random()*images.length);
       $('.header').css('background-image', 'url('+images[index]+')');
 
+      </script>
+      <script>
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            xml = this.responseText;
+            var Parser = new DOMParser();
+            var DOM = Parser.parseFromString(xml, "text/xml");
+            var newsItems = $(DOM).find("item");
+            console.log(newsItems);
+            for(var i=0; i<newsItems.length; i++) {
+              $("#news").append("<tr><td><a href='"+ newsItems[i].children[1].innerHTML +"'>"+ newsItems[i].children[0].innerHTML +"</a></td></tr>");
+            }
+          }
+        };
+        xhttp.open("GET", "http://calm-refuge-98594.herokuapp.com/getGoogleNews", true);
+        xhttp.send();
+      }
+      loadDoc();
+      function loadDoc1() {
+        $.get('http://calm-refuge-98594.herokuapp.com/getArticles',function(res) {
+          var Parser = new DOMParser();
+          var DOM = Parser.parseFromString(res, "text/xml");
+          var articleTitle = $(DOM).find("title");
+          var articleLinks = $(DOM).find("link");
+          console.log(articleLinks);
+          for(var i=0; i<articleLinks.length; i++) {
+            $("#articles").append("<tr><td><a href='"+ articleLinks[i].innerHTML +"'>"+ articleTitle[i].innerHTML +"</a></td></tr>");
+          }
+        });
+      }
+      loadDoc1();
       </script>
     </body>
 

@@ -11,7 +11,6 @@ from django.conf import settings
 import tempfile
 import os
 
-
 def index(request):
     template = "search/index.html"
     context = {}
@@ -35,6 +34,10 @@ def team(request):
     context = {}
     return render(request, template, context)
 
+def sponsor(request):
+    template = "search/sponsor.html"
+    context = {}
+    return render(request, template, context)
 
 # Keyword search
 def search_keyword(request):

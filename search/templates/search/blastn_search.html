@@ -1,7 +1,7 @@
 {% extends "search/index.html" %}
 
 {% block search %}
-
+<p>Transcripts can be searched via nucleotide search string.  Please use &#39;T&#39; instead of &#39;U&#39; as your query.  Searches are implemented using BLASTn to search a local blast database for each individual species.  Local BLAST databases were set up using makeblastdb function from NCBI BLAST+ v. 2.6.0 (NCBI; makeblastdb –in fasta file –parse_seqids –dbtype nucl).  If no results are found consider increasing the expected value to allow for less sequence similarity (Default e-value: 0.00001).</p>
 <form role="search" method="get" action="{% url 'search:blastn_search' %}">
     {% csrf_token %}
     <div class="form-group">
