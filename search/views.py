@@ -105,7 +105,10 @@ def blastn_search(request):
     name = request.GET.get("query")
     # evalue of search given by user
     threshold = request.GET.get("threshold")
-    threshold = float(threshold)
+    if threshold != 'None':
+        threshold = float(threshold)
+    else:
+        threshold = 0.0001
     database_name = request.GET.get("species")
     query = request.GET.get("query")
     query = validate_and_replace(query)
