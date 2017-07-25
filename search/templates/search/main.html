@@ -1,7 +1,6 @@
 {% extends "search/index.html" %}
 
 {% block search %}
-
 <div class="row">
   <div class="col-xs-9">
     <div class="row">
@@ -69,19 +68,9 @@
               <th>Breaking News</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>News 1</td>
-            </tr>
-            <tr>
-              <td>News 1</td>
-            </tr>
-            <tr>
-              <td>News 1</td>
-            </tr>
-            <tr>
-              <td>News 1</td>
-            </tr>
+          <tbody id="news">
+
+          </tbody>
       </table>
     </div>
     <div class="panel panel-default">
@@ -91,24 +80,13 @@
               <th>Recent Articles</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Article 1</td>
-            </tr>
-            <tr>
-              <td>Article 1</td>
-            </tr>
-            <tr>
-              <td>Article 1</td>
-            </tr>
-            <tr>
-              <td>Article 1</td>
-            </tr>
+          <tbody id="articles">
+            {{html}}
+          </tbody>
       </table>
     </div>
   </div>
 </div>
-
 {% block results %} {% endblock %}
 
 {% endblock %}

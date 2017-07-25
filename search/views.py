@@ -11,7 +11,6 @@ from django.conf import settings
 import tempfile
 import os
 
-
 def index(request):
     template = "search/index.html"
     context = {}

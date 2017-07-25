@@ -119,3 +119,9 @@ body {
   font-family: "Josefin Slab";
   font-size: 1.6em;
 }
+.panel-default {
+    border-color: #ddd;
+    position: relative;
+    height: 300px;
+    overflow-y: scroll;
+}
