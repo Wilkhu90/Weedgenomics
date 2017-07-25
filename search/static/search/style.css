@@ -123,9 +123,18 @@ body {
     border-color: #ddd;
     position: relative;
     height: 300px;
+    overflow-y: hidden;
+}
+.panel-default1 {
+    border-color: #ddd;
+    position: relative;
+    height: 300px;
     overflow-y: scroll;
 }
 .media-body {
   background: white;
   border-radius: 10px;
+}
+.btn {
+    white-space: normal;
 }
