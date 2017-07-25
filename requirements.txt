@@ -40,7 +40,6 @@ six==1.10.0
 tabulate==0.7.5
 termcolor==1.1.0
 urllib==1.21.1
-urllib2==1498656401.94
 wcwidth==0.1.7
 websocket-client==0.44.0
 whichcraft==0.4.1
