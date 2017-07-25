@@ -36,12 +36,13 @@ def team(request):
 
 
 # Sequences.objects.exclude(gene_description__icontains = query).filter(species__iexact=species)
+# all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
 def search_keyword(request):
     query = request.GET.get("query")
     species = request.GET.get("species")
     all_sequences = []
     if len(query) > 0:
-        all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
+        all_sequences = Sequences.objects.raw('SELECT * FROM sequences Where species = "'+species+'"'+' and gene_description LIKE "%%'+query+'%%"')
     context = {"results": all_sequences, "searchQuery": {"query": query, "species": species}}
     template = "search/results.html"
     return render(request, template, context)
