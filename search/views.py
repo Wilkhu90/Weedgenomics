@@ -10,7 +10,6 @@ from .forms import ContactForm
 from django.conf import settings
 import tempfile
 import os
-import scholar
 
 def index(request):
     template = "search/index.html"
@@ -20,9 +19,7 @@ def index(request):
 
 def main(request):
     template = "search/main.html"
-    html = scholar.main();
-    print(html)
-    context = {"html": html}
+    context = {}
     return render(request, template, context)
 
 
