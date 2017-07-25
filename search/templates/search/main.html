@@ -81,22 +81,12 @@
             </tr>
           </thead>
           <tbody id="articles">
-
+            {{html}}
           </tbody>
       </table>
     </div>
   </div>
 </div>
-<div id="htmlId">{{articles |safe}}</div>
-<script>
-  var article = document.getElementById('htmlId');
-  var articles = document.getElementsByClassName('gs_rt');
-  console.log(articles);
-  for(var i=0; i<articles.length; i++) {
-    $("#articles").append("<tr><td><a href='"+ articles[i].firstChild.href +"'>"+ articles[i].innerText +"</a></td></tr>");
-  }
-  article.removeChild(articles);
-</script>
 {% block results %} {% endblock %}
 
 {% endblock %}
