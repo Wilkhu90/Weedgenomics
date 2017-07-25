@@ -40,12 +40,13 @@ def sponsor(request):
     return render(request, template, context)
 
 # Sequences.objects.exclude(gene_description__icontains = query).filter(species__iexact=species)
+# all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
 def search_keyword(request):
     query = request.GET.get("query")
     species = request.GET.get("species")
     all_sequences = []
     if len(query) > 0:
-        all_sequences = Sequences.objects.filter(gene_description__icontains=query).filter(species__iexact=species)
+        all_sequences = Sequences.objects.raw('SELECT * FROM sequences Where species = "'+species+'"'+' and gene_description LIKE "%%'+query+'%%"')
     context = {"results": all_sequences, "searchQuery": {"query": query, "species": species}}
     template = "search/results.html"
     return render(request, template, context)
@@ -215,7 +216,8 @@ def contact(request):
         message = comment + '\n\nby \n\n' + name + '\nemail: '+email_from+'\naffiliation: '+affiliation+'\nposition: '+position
 
         # password obtained from environment variable
-        settings.EMAIL_HOST_PASSWORD = os.environ['Web_password']
+        # settings.EMAIL_HOST_PASSWORD = os.environ['Web_password']
+        settings.EMAIL_HOST_PASSWORD = 'Herbs@123'
 
         send_mail(subject, message, email_from, email_to, fail_silently=True)
         message = 'Your message has been received, I will get back to you soon! Thanks!'
@@ -228,7 +230,7 @@ def contact(request):
 # protein search at ncbi
 def blastx_at_ncbi(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
-    result_handle = NCBIWWW.qblast("blastx", "nt", query_sequence.sequence)
+    result_handle = NCBIWWW.qblast("blastx", "nr", query_sequence.sequence)
     blast_records = NCBIXML.read(result_handle)
     results = blast_records.alignments
     hits = []
