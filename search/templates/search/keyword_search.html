@@ -1,7 +1,7 @@
 {% extends "search/index.html" %}
 
 {% block search %}
-
+<p>Assembled transcriptomes can be searched by keyword annotations.  Names attached to transcripts using Trinotate were selected based on the Swiss-Prot database annotation <a href="http://www.uniprot.org/">(http://www.uniprot.org/)</a>. Transcripts that were unannotated were named as &#39;unidentified transcript&#39;.  To search by keyword, you must first select a species to narrow the search field.  Results can be downloaded as FASTA files. </p>
 <form role="search" method="get" action="{% url 'search:search_keyword' %}">
     {% csrf_token %}
     <div class="form-group">
