@@ -138,3 +138,14 @@ body {
 .btn {
     white-space: normal;
 }
+#herbDetail {
+  font-family: courier;
+}
+#removeBorder tbody>tr>td {
+    border: none;
+    border-top: none;
+}
+#removeBorder {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
