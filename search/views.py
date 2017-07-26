@@ -61,6 +61,15 @@ def detail(request, contig_id):
     template = "search/details.html"
     return render(request, template, context)
 
+def herbicideDetail(request, genbankId):
+    try:
+        sequence = herbiscide.objects.get(genbankId=genbankId)
+    except Sequences.DoesNotExist:
+        raise Http404("Sequence Does Not Exist")
+    context = {"sequence": sequence}
+    template = "search/herbicideDetail.html"
+    return render(request, template, context)
+
 
 def search_sequence_render(request):
     return render(request, "search/sequence_search.html", {})

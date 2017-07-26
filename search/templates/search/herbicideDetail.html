@@ -1,0 +1,26 @@
+{% extends "search/herbiscide_search.html" %}
+
+{% load staticfiles %}
+
+{% block results %}
+<div class="container">
+  <table class="table table-striped table-bordered">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Organism</th>
+        <th>GeneBank Accession</th>
+        <th>Sequence</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr>
+        <td>{{sequence.organism}}</td>
+        <td>{{sequence.genbankId}}</td>
+        <td><textarea class="form-control" id="sequenceText">
+          {{sequence.sequence}}
+          </textarea></td>
+      </tr>
+      </tbody>
+  </table>
+</div>
+{% endblock %}
