@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^blastx_ncbi/(?P<seq_id>[0-9]+)/$', views.blastx_at_ncbi, name='blastx_at_ncbi'),
     url(r'^herbiscide_search/$', views.herbiscide_search, name='herbiscide_search'),
     url(r'^herbiscide_render/$', views.herbiscide_render, name='herbiscide_render'),
+    url(r'^herbicideDetail/(?P<genbankId>[a-zA-Z0-9\.]+)/$', views.herbicideDetail, name='herbicideDetail'),
 ]

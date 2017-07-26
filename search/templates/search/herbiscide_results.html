@@ -15,7 +15,7 @@
         <tr>
           <th></th>
           <th>Organism</th>
-          <th>Gene bank Id</th>
+          <th>GenBank Accession</th>
           <th>Description</th>
           <th>Submission Date</th>
           <th>Sequence</th>
@@ -27,7 +27,7 @@
         <tr>
           <td>{{forloop.counter}}</td>
           <td>{{result.organism}}</td>
-          <td>{{result.genbankId}}</td>
+          <td><a href="{% url 'search:herbicideDetail' result.genbankId %}">{{result.genbankId}}</a></td>
           <td><textarea class="form-control" id="sequenceText">{{result.description}}</textarea></td>
           <td>{{result.submissionDate}}</td>
           <td><textarea class="form-control" id="sequenceText">{{result.sequence}}</textarea></td>
