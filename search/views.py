@@ -272,3 +272,35 @@ def herbiscide_search(request):
 def herbiscide_render(request):
     template = "search/herbiscide_search.html"
     return render(request, template, {})
+
+def download_herb_file(request, genbankId):
+    sequence = herbiscide.objects.get(genbankId=genbankId)
+    temp_sequence = str(sequence.sequence)
+
+    # insert next line for every 80 characters
+    length = len(temp_sequence)
+
+    temp_list = []
+    begin = 0
+    for i in range(0, length):
+        if i % 80 == 0:
+            temp_list.append(temp_sequence[begin:i]+'\n')
+            begin = i
+    temp_list.append(temp_sequence[begin:])
+
+    temp_sequence = ''.join(temp_list)
+
+    my_sequence = "> "+sequence.genbankId+" | "+sequence.description
+    my_sequence = my_sequence+temp_sequence
+
+    temp_file = tempfile.TemporaryFile()
+    my_sequence = my_sequence.encode()
+
+    temp_file.write(my_sequence)
+    temp_file.seek(0)
+
+    response = HttpResponse(temp_file, content_type='application/fasta;charset=UTF-8')
+    response['Content-Disposition'] = "attachment; filename=%s" % sequence.organism+".fasta"
+
+    temp_file.close()
+    return response
