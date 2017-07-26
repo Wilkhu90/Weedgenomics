@@ -26,7 +26,7 @@
         {% for result in results %}
         <tr>
           <td>{{forloop.counter}}</td>
-          <td>{{result.organism}}</td>
+          <td>{{result.organism}}<a href="{% url 'search:download_herb_fasta' result.genbankId %}"> <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /> </a></td>
           <td><a href="{% url 'search:herbicideDetail' result.genbankId %}">{{result.genbankId}}</a></td>
           <td><textarea class="form-control" id="sequenceText">{{result.description}}</textarea></td>
           <td>{{result.submissionDate}}</td>

@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^search_sequence_render/$', views.search_sequence_render, name='search_sequence_render'),
     url(r'^(?P<contig_id>[0-9]+)/$', views.detail, name='detail'),
     url(r'^download_fasta/(?P<seq_id>[0-9]+)/$', views.download_file, name='download_fasta'),
+    url(r'^download_herb_fasta/(?P<genbankId>[a-zA-Z0-9\.]+)/$', views.download_herb_file, name='download_herb_fasta'),
     url(r'^blastn_search/$', views.blastn_search, name='blastn_search'),
     url(r'^blastn_render/$', views.blastn_render, name='blastn_render'),
     url(r'^blastn_ncbi/(?P<seq_id>[0-9]+)/$', views.blastn_at_ncbi, name='blastn_at_ncbi'),
