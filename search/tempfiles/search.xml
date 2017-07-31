@@ -10,7 +10,7 @@
   <BlastOutput_query-len>44</BlastOutput_query-len>
   <BlastOutput_param>
     <Parameters>
-      <Parameters_expect>0.01</Parameters_expect>
+      <Parameters_expect>0.0001</Parameters_expect>
       <Parameters_sc-match>1</Parameters_sc-match>
       <Parameters_sc-mismatch>-2</Parameters_sc-mismatch>
       <Parameters_gap-open>0</Parameters_gap-open>
