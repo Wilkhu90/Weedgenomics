@@ -39,6 +39,11 @@ def sponsor(request):
     context = {}
     return render(request, template, context)
 
+def software(request):
+    template = "search/software.html"
+    context = {}
+    return render(request, template, context)
+
 # Keyword search
 def search_keyword(request):
     query = request.GET.get("query")
