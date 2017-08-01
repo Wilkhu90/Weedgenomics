@@ -9,7 +9,21 @@
       </div>
     </div>
     {% if hits %}
-
+    <div class="pagination">
+      <span class="step-links">
+          {% if hits.has_previous %}
+              <a href="?page={{ hits.previous_page_number }}"><button type="button" class="btn btn-primary">Previous</button></a>
+          {% endif %}
+          {% if hits.number %}
+          <span class="current">
+              Page {{ hits.number }} of {{ hits.paginator.num_pages }}
+          </span>
+          {% endif %}
+          {% if hits.has_next %}
+              <a href="?page={{ hits.next_page_number }}"><button type="button" class="btn btn-primary">Next</button></a>
+          {% endif %}
+      </span>
+    </div>
     {% for result in hits %}
     <table class="table table-striped table-bordered" id="removeBorder">
       <thead class="thead-inverse">
@@ -104,7 +118,21 @@
     </script>
     <br/>
     {% endfor %}
-
+    <div class="pagination">
+      <span class="step-links">
+          {% if hits.has_previous %}
+              <a href="?page={{ hits.previous_page_number }}"><button type="button" class="btn btn-primary">Previous</button></a>
+          {% endif %}
+          {% if hits.number %}
+          <span class="current">
+              Page {{ hits.number }} of {{ hits.paginator.num_pages }}
+          </span>
+          {% endif %}
+          {% if hits.has_next %}
+              <a href="?page={{ hits.next_page_number }}"><button type="button" class="btn btn-primary">Next</button></a>
+          {% endif %}
+      </span>
+    </div>
     {% else %}
     <h4> No results found </h4>
     {% endif %}

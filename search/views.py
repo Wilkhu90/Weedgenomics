@@ -1,5 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Sequences, herbiscide
 from django.http import HttpResponse
 from Bio.Blast.Applications import NcbiblastnCommandline
@@ -189,7 +190,7 @@ def blastn_search(request):
     return render(request, template, context)
 
 
-def blastn_at_ncbi(request, seq_id):
+def blastn_at_ncbi(seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     result_handle = NCBIWWW.qblast("blastn", "nt", query_sequence.sequence)
     blast_records = NCBIXML.read(result_handle)
@@ -207,10 +208,26 @@ def blastn_at_ncbi(request, seq_id):
 
             hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
+    return hits
+
+def blastn_func(request, seq_id):
+    query_sequence = Sequences.objects.get(pk=seq_id)
+    hit_list = blastn_at_ncbi(seq_id)
+    paginator = Paginator(hit_list, 10) # Show 10 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        hits = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        hits = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        hits = paginator.page(paginator.num_pages)
     context = {"hits": hits, "searchQuery": query_sequence.sequence}
     template = "search/blastn_results.html"
-    return render(request, template, context)
 
+    return render(request, template, context)
 
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
@@ -260,7 +277,7 @@ def contact(request):
 
 
 # protein search at ncbi
-def blastx_at_ncbi(request, seq_id):
+def blastx_at_ncbi(seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     result_handle = NCBIWWW.qblast("blastx", "nr", query_sequence.sequence)
     blast_records = NCBIXML.read(result_handle)
@@ -278,11 +295,26 @@ def blastx_at_ncbi(request, seq_id):
 
             hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
-    context = {"hits": hits, "searchQuery": query_sequence.sequence}
-    # change to new html page if needed later
-    template = "search/blastn_results.html"
-    return render(request, template, context)
+    return hits
 
+def blastx_func(request, seq_id):
+    query_sequence = Sequences.objects.get(pk=seq_id)
+    hit_list = blastx_at_ncbi(seq_id)
+    paginator = Paginator(hit_list, 10) # Show 10 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        hits = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        hits = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        hits = paginator.page(paginator.num_pages)
+    context = {"hits": hits, "searchQuery": query_sequence.sequence}
+    template = "search/blastn_results.html"
+
+    return render(request, template, context)
 
 def herbiscide_search(request):
     geneId= request.GET.get("geneId")
