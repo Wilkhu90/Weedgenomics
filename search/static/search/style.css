@@ -9,12 +9,12 @@
   background-image: url("http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/close-up-of-infloresence-and-trifoliate-leaves.jpg");
   background-position: center center;
   background-size: cover;
-  height: 300px;
+  height: 200px;
   width: 100%;
   position: relative;
   background-attachment: fixed;
   margin-top: 50px;
-  padding-top: 80px;
+  padding-top: 30px;
 }
 .logo a:hover {
   text-decoration: none;
@@ -134,6 +134,7 @@ body {
 .media-body {
   background: white;
   border-radius: 10px;
+  padding: 10px;
 }
 .btn {
     white-space: normal;

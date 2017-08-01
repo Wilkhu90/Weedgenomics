@@ -36,7 +36,7 @@
             <a href="/species">Assembled Species</span></a>
           </li>
           <li class="dropdown" id="tools">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="{% url 'search:search_keyword_render' %}">Keyword Search</a></li>
               <li><a href="{% url 'search:blastn_render' %}">Sequence Search</a></li>
@@ -44,7 +44,7 @@
             </ul>
           </li>
           <li class="dropdown" id="about">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li id="team">
                 <a href="/team">Team</span></a>
@@ -58,8 +58,11 @@
             <a href="/sponsor">Sponsor</span></a>
           </li>
           <li class="dropdown" id="others">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Link(s) <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Links<span class="caret"></span></a>
             <ul class="dropdown-menu">
+              <li>
+                <a href="/software">Softwares Used</a>
+              </li>
               <li>
                 <a href="http://www.auburn.edu/academic/agriculture/cses/WeedGenomics/" target="_blank">Herbicide Resistance Lab</a>
               </li>
@@ -136,8 +139,7 @@ window.twttr = (function(d, s, id) {
 
       var images = ['http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/close-up-of-infloresence-and-trifoliate-leaves.jpg',
                     'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/general1.jpg',
-                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/leaf-close-up-note-waxy-leaf-appearance-similar-to-other-commelineaceae-family-plants.jpg',
-                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/leaf-characteristics.jpg'];
+                    'http://cses.auburn.edu/weedscience/wp-content/uploads/sites/58/2015/03/leaf-close-up-note-waxy-leaf-appearance-similar-to-other-commelineaceae-family-plants.jpg'];
 
       var index = Math.floor(Math.random()*images.length);
       $('.header').css('background-image', 'url('+images[index]+')');

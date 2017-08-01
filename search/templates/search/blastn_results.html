@@ -3,7 +3,7 @@
 {% load staticfiles %}
 
 {% block results %}
-    <div class="row">
+    <div class="row" id="removeBorder">
       <div class="col-xs-12">
         <h4>Search Results for Sequence: "{{searchQuery.query}}" and Species: "{{searchQuery.species|title}}"</h4>
       </div>
@@ -11,10 +11,10 @@
     {% if hits %}
 
     {% for result in hits %}
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered" id="removeBorder">
       <thead class="thead-inverse">
         <tr>
-          <th>{{forloop.counter}}. <a href="{% url 'search:download_fasta' result.ID %}">Download  <img src= "{% static 'search/images/download.png' %}" width="20" height="20" /></a></th>
+          <th>{{forloop.counter}}. <a href="{% url 'search:download_fasta' result.ID %}">Download  <img src= "{% static 'search/images/download.png' %}" width="40" height="40" /></a></th>
         </tr>
       </thead>
         <tbody>
@@ -26,18 +26,19 @@
                 <h4>Sequence ID: {{result.Hit_id}}</h4>
               </div>
               <div class="col-xs-3">
-                <h4>Length: {{result.Hit_sbject|length}}</h4>
+                <h4>Length: {{result.length}}</h4>
               </div>
               <div class="col-xs-3">
                 <h4>Threshold Exp: {{result.Hit_exp}}</h4>
               </div>
             </div>
+            {% for res in result.new_seq %}
             <div class="row">
               <div class="col-xs-2">
                 Query
               </div>
               <div class="col-xs-10">
-                <p class="stretch">{{result.Hit_query}}</p>
+                <p class="stretch">{{res.Hit_query}}</p>
               </div>
             </div>
             <div class="row">
@@ -45,7 +46,7 @@
                 Match (<span class="mismatch"></span>)
               </div>
               <div class="col-xs-10">
-                <p class="stretch match">{{result.Hit_match}}</p>
+                <p class="stretch match">{{res.Hit_match}}</p>
               </div>
             </div>
             <div class="row">
@@ -53,10 +54,10 @@
                 Subject
               </div>
               <div class="col-xs-10">
-                <p class="stretch">{{result.Hit_sbject}}</p>
+                <p class="stretch">{{res.Hit_sbject}}</p>
               </div>
             </div>
-          </td>
+            {% endfor %}
         </tr>
         </tbody>
     </table>
@@ -95,7 +96,7 @@
           if(den != 0) {
             console.log((num/den*100).toFixed(2)+'%');
             console.log($(this).parent().parent().children()[0].children[0]);
-            var match = $(this).parent().parent().children()[0].children[0]
+            var match = $(this).parent().parent().children()[0].children[0];
             match.innerHTML = (num/den*100).toFixed(2)+'%';
           }
       });

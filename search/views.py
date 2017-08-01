@@ -10,6 +10,7 @@ from .forms import ContactForm
 from django.conf import settings
 import tempfile
 import os
+import re, math
 
 def index(request):
     template = "search/index.html"
@@ -36,6 +37,11 @@ def team(request):
 
 def sponsor(request):
     template = "search/sponsor.html"
+    context = {}
+    return render(request, template, context)
+
+def software(request):
+    template = "search/software.html"
     context = {}
     return render(request, template, context)
 
@@ -167,9 +173,16 @@ def blastn_search(request):
             for hit in result.hsps:
                 # get the id based on contg_id / hit.hit_id
                 sequence = Sequences.objects.get(contig_id=result.hit_id)
-                hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
-                             "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
-                             "description": sequence.gene_description, "ID": sequence.id, "Hit_id": result.hit_id})
+                changedQuery = re.sub(r"-", "_", hit.query)
+                times = int(math.ceil(len(changedQuery)/60.0))
+                size = 60
+                length = len(hit.match)
+                new_seq = []
+                for i in range(0, times):
+                    new_seq.append({"Hit_query": changedQuery[i*size:(i+1)*size], "Hit_match": hit.match[i*size:(i+1)*size], "Hit_sbject": hit.sbjct[i*size:(i+1)*size]})
+
+                hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
+                "description": sequence.gene_description, "ID": sequence.id, "Hit_id": result.hit_id})
 
     context = {"hits": hits, "searchQuery": {"species": database_name, "query": name}}
     template = "search/blastn_results.html"
@@ -184,8 +197,15 @@ def blastn_at_ncbi(request, seq_id):
     hits = []
     for result in results:
         for hit in result.hsps:
-            hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
-                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
+            changedQuery = re.sub(r"-", "_", hit.query)
+            times = int(math.ceil(len(changedQuery)/60.0))
+            size = 60
+            length = len(hit.match)
+            new_seq = []
+            for i in range(0, times):
+                new_seq.append({"Hit_query": changedQuery[i*size:(i+1)*size], "Hit_match": hit.match[i*size:(i+1)*size], "Hit_sbject": hit.sbjct[i*size:(i+1)*size]})
+
+            hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     context = {"hits": hits}
     template = "search/blastn_results.html"
@@ -248,8 +268,15 @@ def blastx_at_ncbi(request, seq_id):
     hits = []
     for result in results:
         for hit in result.hsps:
-            hits.append({"Hit_exp": hit.expect, "Hit_query": hit.query,
-                         "Hit_match": hit.match, "Hit_sbject": hit.sbjct,
+            changedQuery = re.sub(r"-", "_", hit.query)
+            times = int(math.ceil(len(changedQuery)/60.0))
+            size = 60
+            length = len(hit.match)
+            new_seq = []
+            for i in range(0, times):
+                new_seq.append({"Hit_query": changedQuery[i*size:(i+1)*size], "Hit_match": hit.match[i*size:(i+1)*size], "Hit_sbject": hit.sbjct[i*size:(i+1)*size]})
+
+            hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     context = {"hits": hits}
 
