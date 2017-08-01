@@ -184,7 +184,7 @@ def blastn_search(request):
                 hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
                 "description": sequence.gene_description, "ID": sequence.id, "Hit_id": result.hit_id})
 
-    context = {"hits": hits, "searchQuery": {"species": database_name, "query": name}}
+    context = {"hits": hits, "searchQuery": name}
     template = "search/blastn_results.html"
     return render(request, template, context)
 
@@ -207,7 +207,7 @@ def blastn_at_ncbi(request, seq_id):
 
             hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
-    context = {"hits": hits}
+    context = {"hits": hits, "searchQuery": query_sequence.sequence}
     template = "search/blastn_results.html"
     return render(request, template, context)
 
@@ -278,7 +278,7 @@ def blastx_at_ncbi(request, seq_id):
 
             hits.append({"Hit_exp": hit.expect, "new_seq": new_seq, "length": length,
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
-    context = {"hits": hits}
+    context = {"hits": hits, "searchQuery": query_sequence.sequence}
 
     # change to new html page if needed later
     template = "search/blastn_results.html"
