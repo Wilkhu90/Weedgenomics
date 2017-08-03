@@ -168,11 +168,13 @@ window.twttr = (function(d, s, id) {
         $.get('http://calm-refuge-98594.herokuapp.com/getArticles',function(res) {
           var Parser = new DOMParser();
           var DOM = Parser.parseFromString(res, "text/xml");
-          var articleTitle = $(DOM).find("title");
-          var articleLinks = $(DOM).find("link");
-          console.log(articleLinks);
-          for(var i=0; i<articleLinks.length; i++) {
-            $("#articles").append("<tr><td><a href='"+ articleLinks[i].innerHTML +"'>"+ articleTitle[i].innerHTML +"</a></td></tr>");
+          // var articleTitle = $(DOM).find("title");
+          // var articleLinks = $(DOM).find("link");
+          var articlesItems = $(DOM).find("item");
+          console.log(articlesItems);
+          //console.log(articleLinks);
+          for(var i=0; i<articlesItems.length; i++) {
+            $("#articles").append("<tr><td><a href='"+ articlesItems[i].children[2].innerHTML +"'>"+ articlesItems[i].firstElementChild.innerHTML +"</a></td></tr>");
           }
         });
       }
