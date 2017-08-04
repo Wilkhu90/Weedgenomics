@@ -129,23 +129,24 @@ def blastn_search(request):
     else:
         threshold = 0.0001
     database_name = request.GET.get("species")
+
     query = request.GET.get("query")
     query = validate_and_replace(query)
     print(query)
     # check which database because each database has different names
-    if database_name == 'Cyperus_esculentus':
+    if database_name == 'Cyperus Esculentus':
         database = 'search/data/Cyperus_esculentus/YNS_NewNames.fasta'
-    if database_name == 'Eleusine_indica':
+    if database_name == 'Eleusine Indica':
         database = 'search/data/Eleusine_indica/EleusineIndicaFinal.fasta'
-    if database_name == 'Cyperus_rotundus':
+    if database_name == 'Cyperus Rotundus':
         database = 'search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta'
-    if database_name == 'Poa_annua_infirma':
+    if database_name == 'Poa Annua Infirma':
         database = 'search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta'
-    if database_name == 'Poa_annua_supina':
+    if database_name == 'Poa Annua Supina':
         database = 'search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta'
-    if database_name == 'Poa_infirma':
+    if database_name == 'Poa Infirma':
         database = 'search/data/Poa_infirma/InfirmaFinal.fasta'
-    if database_name == 'Poa_supina':
+    if database_name == 'Poa Supina':
         database = 'search/data/Poa_supina/SupinaFinal.fasta'
 
     hits = []
@@ -210,7 +211,6 @@ def blastn_at_ncbi(seq_id):
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     return hits
 
-
 def blastn_func(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     hit_list = blastn_at_ncbi(seq_id)
@@ -229,7 +229,6 @@ def blastn_func(request, seq_id):
     template = "search/blastn_results.html"
 
     return render(request, template, context)
-
 
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
@@ -299,7 +298,6 @@ def blastx_at_ncbi(seq_id):
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     return hits
 
-
 def blastx_func(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     hit_list = blastx_at_ncbi(seq_id)
@@ -318,7 +316,6 @@ def blastx_func(request, seq_id):
     template = "search/blastn_results.html"
 
     return render(request, template, context)
-
 
 def herbiscide_search(request):
     geneId= request.GET.get("geneId")
@@ -368,10 +365,3 @@ def download_herb_file(request, genbankId):
     temp_file.close()
     return response
 
-
-# search for sequences in the same database in the same species
-# seq_id will contain the id of the sequence to be searched
-def local_blast_search(request):
-    template = 'search/'
-    context = {}
-    return render(request, template, context)
