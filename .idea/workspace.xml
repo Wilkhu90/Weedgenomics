@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f677117d-3ea3-4917-bd99-eb545adb38aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/tempfiles/query.fasta" afterPath="$PROJECT_DIR$/search/tempfiles/query.fasta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/tempfiles/search.xml" afterPath="$PROJECT_DIR$/search/tempfiles/search.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/templates/search/blastn_search.html" afterPath="$PROJECT_DIR$/search/templates/search/blastn_search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/templates/search/results.html" afterPath="$PROJECT_DIR$/search/templates/search/results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/views.py" afterPath="$PROJECT_DIR$/search/views.py" />
@@ -22,8 +20,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6347">
-              <caret line="367" column="0" lean-forward="true" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="126" column="30" lean-forward="true" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -32,8 +30,8 @@
       <file leaf-file-name="blastn_search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+            <state relative-caret-position="441">
+              <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -42,8 +40,8 @@
       <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/templates/search/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="105" lean-forward="false" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="105" />
+            <state relative-caret-position="336">
+              <caret line="25" column="74" lean-forward="false" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -89,9 +87,9 @@
         <option value="$PROJECT_DIR$/search/forms.py" />
         <option value="$PROJECT_DIR$/search/templates/search/contact.html" />
         <option value="$PROJECT_DIR$/search/urls.py" />
+        <option value="$PROJECT_DIR$/search/templates/search/blastn_search.html" />
         <option value="$PROJECT_DIR$/search/templates/search/results.html" />
         <option value="$PROJECT_DIR$/search/views.py" />
-        <option value="$PROJECT_DIR$/search/templates/search/blastn_search.html" />
       </list>
     </option>
   </component>
@@ -562,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501820596984</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Updated Local blast search">
+      <created>1501865335247</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1501865335247</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -644,7 +649,8 @@
     <MESSAGE value="Updated the Keyword search" />
     <MESSAGE value="Updated the blastn search" />
     <MESSAGE value="Updated the Contact page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the Contact page." />
+    <MESSAGE value="Updated Local blast search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Local blast search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1039,26 +1045,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/results.html">
+    <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="105" lean-forward="false" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="105" />
+        <state relative-caret-position="441">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_search.html">
+    <entry file="file://$PROJECT_DIR$/search/templates/search/results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+        <state relative-caret-position="336">
+          <caret line="25" column="74" lean-forward="false" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6347">
-          <caret line="367" column="0" lean-forward="true" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="126" column="30" lean-forward="true" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
           <folding />
         </state>
       </provider>

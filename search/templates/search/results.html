@@ -23,7 +23,7 @@
                   <form role="search" method="get" action="{% url 'search:blastn_search' %}">
                       <input type="hidden" name="query" value="{{result.sequence}}">
                       <input type="hidden" name="species" value="{{searchQuery.species|title}}">
-                      <input type="hidden" name="threshold" value="None">
+                      <input type="hidden" name="threshold" value="Default">
                       <button type="submit" class="btn btn-primary">Local Blast</button>
                   </form>
             </div>

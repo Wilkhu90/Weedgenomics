@@ -124,7 +124,7 @@ def blastn_search(request):
     name = request.GET.get("query")
     # evalue of search given by user
     threshold = request.GET.get("threshold")
-    if threshold != 'None':
+    if threshold != 'Default':
         threshold = float(threshold)
     else:
         threshold = 0.0001
