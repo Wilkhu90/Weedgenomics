@@ -210,6 +210,7 @@ def blastn_at_ncbi(seq_id):
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     return hits
 
+
 def blastn_func(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     hit_list = blastn_at_ncbi(seq_id)
@@ -228,6 +229,7 @@ def blastn_func(request, seq_id):
     template = "search/blastn_results.html"
 
     return render(request, template, context)
+
 
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
@@ -297,6 +299,7 @@ def blastx_at_ncbi(seq_id):
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     return hits
 
+
 def blastx_func(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     hit_list = blastx_at_ncbi(seq_id)
@@ -316,6 +319,7 @@ def blastx_func(request, seq_id):
 
     return render(request, template, context)
 
+
 def herbiscide_search(request):
     geneId= request.GET.get("geneId")
     genus = request.GET.get("genus")
@@ -330,6 +334,7 @@ def herbiscide_search(request):
 def herbiscide_render(request):
     template = "search/herbiscide_search.html"
     return render(request, template, {})
+
 
 def download_herb_file(request, genbankId):
     sequence = herbiscide.objects.get(genbankId=genbankId)
@@ -362,3 +367,11 @@ def download_herb_file(request, genbankId):
 
     temp_file.close()
     return response
+
+
+# search for sequences in the same database in the same species
+# seq_id will contain the id of the sequence to be searched
+def local_blast_search(request):
+    template = 'search/'
+    context = {}
+    return render(request, template, context)
