@@ -129,23 +129,24 @@ def blastn_search(request):
     else:
         threshold = 0.0001
     database_name = request.GET.get("species")
+
     query = request.GET.get("query")
     query = validate_and_replace(query)
     print(query)
     # check which database because each database has different names
-    if database_name == 'Cyperus_esculentus':
+    if database_name == 'Cyperus Esculentus':
         database = 'search/data/Cyperus_esculentus/YNS_NewNames.fasta'
-    if database_name == 'Eleusine_indica':
+    if database_name == 'Eleusine Indica':
         database = 'search/data/Eleusine_indica/EleusineIndicaFinal.fasta'
-    if database_name == 'Cyperus_rotundus':
+    if database_name == 'Cyperus Rotundus':
         database = 'search/data/Cyperus_rotundus/PNS_TrinityNewNames2.fasta'
-    if database_name == 'Poa_annua_infirma':
+    if database_name == 'Poa Annua Infirma':
         database = 'search/data/Poa_annua_infirma/AnnuaInfirmaHomeoFinal.fasta'
-    if database_name == 'Poa_annua_supina':
+    if database_name == 'Poa Annua Supina':
         database = 'search/data/Poa_annua_supina/AnnuaSupinaHomeoFinal.fasta'
-    if database_name == 'Poa_infirma':
+    if database_name == 'Poa Infirma':
         database = 'search/data/Poa_infirma/InfirmaFinal.fasta'
-    if database_name == 'Poa_supina':
+    if database_name == 'Poa Supina':
         database = 'search/data/Poa_supina/SupinaFinal.fasta'
 
     hits = []
@@ -331,6 +332,7 @@ def herbiscide_render(request):
     template = "search/herbiscide_search.html"
     return render(request, template, {})
 
+
 def download_herb_file(request, genbankId):
     sequence = herbiscide.objects.get(genbankId=genbankId)
     temp_sequence = str(sequence.sequence)
@@ -362,3 +364,4 @@ def download_herb_file(request, genbankId):
 
     temp_file.close()
     return response
+
