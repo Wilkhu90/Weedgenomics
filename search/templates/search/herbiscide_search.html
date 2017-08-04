@@ -1,7 +1,7 @@
 {% extends "search/index.html" %}
 
 {% block search %}
-
+<p>Gene with known or suspected to target-site herbicide resistance were compiled from NCBI for select genre.  NCBI databases were searched for the following target-sites: psbA, ACCase, ALS/AHAS, PPO/protox, alpha or beta tubulin, and EPSP synthase.  The current database contains 1,649 sequences for various genre from Abutilon to Xanthium.  Sequences from this search can be subjected to BLAST search at NCBI, used to search assembled transcriptome databases, or downloaded as fasta for further use.</p>
 <form role="search" method="get" action="{% url 'search:herbiscide_search' %}">
     {% csrf_token %}
     <div class="row">
@@ -20,7 +20,6 @@
             <option value="Acetolactate Synthase">Acetolactate Synthase</option>
             <option value="Alpha or Beta tubulin">Alpha or Beta tubulin</option>
             <option value="PPO">PPO</option>
-            <option value="Cyperus rotundus">Cyperus rotundus</option>
             <option value="EPSP Synthase">EPSP Synthase</option>
         </select>
       </div>
