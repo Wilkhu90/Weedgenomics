@@ -332,6 +332,7 @@ def herbiscide_render(request):
     template = "search/herbiscide_search.html"
     return render(request, template, {})
 
+# This is a test statement
 
 def download_herb_file(request, genbankId):
     sequence = herbiscide.objects.get(genbankId=genbankId)
