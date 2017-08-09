@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^herbiscide_search/$', views.herbiscide_search, name='herbiscide_search'),
     url(r'^herbiscide_render/$', views.herbiscide_render, name='herbiscide_render'),
     url(r'^herbicideDetail/(?P<genbankId>[a-zA-Z0-9\.]+)/$', views.herbicideDetail, name='herbicideDetail'),
+    url(r'^download_fasta/(?P<species>[a-zA-Z\s]+)/$', views.download_fasta, name='download_fasta'),
 ]
