@@ -120,6 +120,16 @@ def download_file(request, seq_id):
     return response
 
 
+# Downloading the fasta file for the species
+def download_fasta(request, species):
+    base = 'search/data/fasta/'
+    temp_file = open(base+species+'.fasta')
+    response = HttpResponse(temp_file, content_type='application/fasta;charset=UTF-8')
+    response['Content-Disposition'] = "attachment; filename=%s" % species + ".fasta"
+    temp_file.close()
+    return response
+
+
 def blastn_search(request):
     name = request.GET.get("query")
     # evalue of search given by user
