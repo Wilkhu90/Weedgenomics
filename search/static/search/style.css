@@ -181,6 +181,7 @@ a:hover {
 #removeBorder {
   table-layout: fixed;
   word-wrap: break-word;
+  font-family: monospace;
 }
 #Border {
   table-layout: fixed;
