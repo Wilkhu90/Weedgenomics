@@ -3,8 +3,7 @@
 {% block search %}
 
 <div>
-  <p>Searchable transcriptome databases were derived from weed species sequenced at Auburn University in collaboration with other university partners.   Other sequenced transciptomes were derived from the NCBI Transcriptome Shotgun (TSA) Assembly Database (<a href="https://www.ncbi.nlm.nih.gov/genbank/tsa/">https://www.ncbi.nlm.nih.gov/genbank/tsa/</a>) using the Sequence Set Browser (<a href="https://www.ncbi.nlm.nih.gov/Traces/wgs/?term=tsa">https://www.ncbi.nlm.nih.gov/Traces/wgs/?term=tsa</a>).   Sequences acquired from TSA were annotated using Trinotate by first assigning a fake Trinity assembly identifier and using the autotrinotate script.  Full credit is given to the authors of the submitted NCBI submitted transcriptomes.  Unless otherwise noted, RNA was extracted and sequenced from a developing leaf.</p>
-  <h2>Species Assesmbled by Dr. McElroy</h2>
+  <h1>Species Page</h1>
   <table class="table table-striped table-bordered">
     <tbody>
       <thead class="thead-inverse">
@@ -19,7 +18,9 @@
       <th class="column7 style1 s">Percent Annotated</th>
       <th class="column8 style1 s">Contributor</th>
       <th class="column9 style1 s">Published</th>
+      <th class="column10 style1 s">Download Fasta</th>
       </tr>
+
     </thead>
       <tr class="row2">
       <td class="column0 style2 s">Eleusine indica</td>
@@ -31,8 +32,10 @@
       <td class="column6 style6 n">7093</td>
       <td class="column7 style5 f">76.2</td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University</td>
-      <td class="column9">&nbsp;</td>
+      <td class="column9"></td>
+      <td class="column10"><div class="col-xs-3"><form method="get" action="{%url 'search:download_fasta' 'Eleusine Indica'%}"><button type="submit" class="btn btn-primary">Download</button></form></td>
       </tr>
+
       <tr class="row3">
       <td class="column0 style2 s">Poa infirma</td>
       <td class="column1 style3 s">weak bluegrass</td>
@@ -44,7 +47,9 @@
       <td class="column7 style5 f">76.3</td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"><div class="col-xs-3"><form method="get" action="{%url 'search:download_fasta' 'Poa Infirma'%}"><button type="submit" class="btn btn-primary">Download</button></form></td>
       </tr>
+
       <tr class="row4">
       <td class="column0 style2 s">Poa supina</td>
       <td class="column1 style3 s">supine bluegrass</td>
@@ -56,7 +61,9 @@
       <td class="column7 style5 f">74.8</td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"><div class="col-xs-3"><form method="get" action="{%url 'search:download_fasta' 'Poa Supina'%}"><button type="submit" class="btn btn-primary">Download</button></form></td>
       </tr>
+
       <tr class="row5">
       <td class="column0 style2 s">Poa annua - infirma</td>
       <td class="column1 style3 s">annual bluegrass - I Genome</td>
@@ -68,7 +75,9 @@
       <td class="column7 style5 f">83.1</td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"><div class="col-xs-3"><form method="get" action="{%url 'search:download_fasta' 'Annua Infirma Homeo'%}"><button type="submit" class="btn btn-primary">Download</button></form></td>
       </tr>
+
       <tr class="row6">
       <td class="column0 style2 s">Poa annua - supina</td>
       <td class="column1 style3 s">annual bluegrass - S Genome</td>
@@ -80,7 +89,9 @@
       <td class="column7 style5 f">83.6</td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"><div class="col-xs-3"><form method="get" action="{%url 'search:download_fasta' 'Annua Supina Homeo'%}"><button type="submit" class="btn btn-primary">Download</button></form></td>
       </tr>
+
       <tr class="row7">
       <td class="column0 style2 s">Cyperus esculentus</td>
       <td class="column1 style3 s">yellow nutsedge</td>
@@ -92,7 +103,9 @@
       <td class="column7 style5 f">54.7</td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, J.K. Norsworthy, Arkansas</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"><div class="col-xs-3"><form method="get" action="{%url 'search:download_fasta' 'Cyperus Esculentus'%}"><button type="submit" class="btn btn-primary">Download</button></form></td>
       </tr>
+
       <tr class="row8">
       <td class="column0 style2 s">Cyperus rotundus</td>
       <td class="column1 style3 s">purple nutsedge</td>
@@ -104,7 +117,9 @@
       <td class="column7 style5 f">49.8</td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, J.K. Norsworthy, Arkansas</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"><div class="col-xs-3"><form method="get" action="{%url 'search:download_fasta' 'Cyperus Rotundus'%}"><button type="submit" class="btn btn-primary">Download</button></form></td>
       </tr>
+
       <tr class="row9">
       <td class="column0 style2 s">Paspalum urvillei</td>
       <td class="column1 style3 s">vaseygrass</td>
@@ -116,7 +131,9 @@
       <td class="column7 style5 null"></td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, P.E. McCullough, Georgia</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"></td>
       </tr>
+
       <tr class="row10">
       <td class="column0 style2 s">Leptochloa panicoides</td>
       <td class="column1 style3 s">Amazon sprangletop</td>
@@ -128,7 +145,9 @@
       <td class="column7 style5 null"></td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, J.K. Norsworthy, Arkansas</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"></td>
       </tr>
+
       <tr class="row11">
       <td class="column0 style2 s">Chamaesyce maculata</td>
       <td class="column1 style3 s">spotted spurge</td>
@@ -140,7 +159,9 @@
       <td class="column7 style5 null"></td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, P.E. McCullough, Georgia</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"></td>
       </tr>
+
       <tr class="row12">
       <td class="column0 style2 s">Cyperus difformis</td>
       <td class="column1 style3 s">small-flowered umbrella sedge</td>
@@ -152,7 +173,9 @@
       <td class="column7 style5 null"></td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, J.K. Norsworthy, Arkansas</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"></td>
       </tr>
+
       <tr class="row13">
       <td class="column0 style2 s">Digitaria sanguinalis</td>
       <td class="column1 style3 s">large crabgrass</td>
@@ -164,7 +187,9 @@
       <td class="column7 style5 null"></td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, P.E. McCullough, Georgia</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"></td>
       </tr>
+
       <tr class="row14">
       <td class="column0 style2 s">Cyperus iria</td>
       <td class="column1 style3 s">rice-flat sedge</td>
@@ -176,134 +201,8 @@
       <td class="column7 style5 null"></td>
       <td class="column8 style3 s">J.S. McElroy, Auburn University, J.K. Norsworthy, Arkansas</td>
       <td class="column9">&nbsp;</td>
+      <td class="column10"></td>
       </tr>
-    </tbody>
-  </table>
-  <h2>Transcriptomes from the NCBI TSA archive</h2>
-  <table class="table table-striped table-bordered" id="Border">
-    <tbody>
-      <thead class="thead-inverse">
-      <tr class="row1">
-        <th style="min-width:50px">Prefix</th>
-				<th style="min-width:50px">Type</th>
-				<th style="min-width:50px">Organism</th>
-				<th style="min-width:50px">Div</th>
-				<th style="min-width:50px">Bioproject</th>
-				<th style="min-width:50px">Biosample</th>
-				<th style="min-width:50px">Infraspecific Name</th>
-				<th style="min-width:50px">Other Source</th>
-				<th style="min-width:50px">Total Length (Mbases)</th>
-				<th style="min-width:50px">Contigs (#)</th>
-				<th style="min-width:50px">update date</th>
-				<th style="min-width:50px">create date</th>
-				<th style="min-width:50px">Genbank Link</th>
-      </tr>
-    </thead>
-    <tr>
-      <td style="min-width:50px">GEOH01</td>
-      <td style="min-width:50px">TSA</td>
-      <td style="min-width:50px">Ambrosia trifida</td>
-      <td style="min-width:50px">PLN</td>
-      <td style="min-width:50px">PRJNA267208</td>
-      <td style="min-width:50px">SAMN03195640</td>
-      <td style="min-width:50px"></td>
-      <td style="min-width:50px">Leaf, five node stage</td>
-      <td style="min-width:50px">174.9</td>
-      <td style="min-width:50px">246544</td>
-      <td style="min-width:50px">06/27/16</td>
-      <td style="min-width:50px">06/27/16</td>
-      <td style="min-width:50px"><a href="https://www.ncbi.nlm.nih.gov/nuccore/GEOH00000000.1">https://www.ncbi.nlm.nih.gov/nuccore/GEOH00000000.1</a></td>
-    </tr>
-    <tr>
-      <td style="min-width:50px">GEZL01</td>
-      <td style="min-width:50px">TSA</td>
-      <td style="min-width:50px">Ambrosia artemisifolia</td>
-      <td style="min-width:50px">PLN</td>
-      <td style="min-width:50px">PRJNA335689</td>
-      <td style="min-width:50px"></td>
-      <td style="min-width:50px"></td>
-      <td style="min-width:50px">Not available</td>
-      <td style="min-width:50px">126.3</td>
-      <td style="min-width:50px">218533</td>
-      <td style="min-width:50px">11/02/16</td>
-      <td style="min-width:50px">09/19/16</td>
-      <td style="min-width:50px"><a href="https://www.ncbi.nlm.nih.gov/nuccore/GEZL00000000.1">https://www.ncbi.nlm.nih.gov/nuccore/GEZL00000000.1</a></td>
-    </tr>
-    <tr>
-      <td style="min-width:50px">ACQK01</td>
-      <td style="min-width:50px">WGS</td>
-      <td style="min-width:50px">Amaranthus tuberculatus</td>
-      <td style="min-width:50px">PLN</td>
-      <td style="min-width:50px">PRJNA38543</td>
-      <td style="min-width:50px">SAMN00008865</td>
-      <td style="min-width:50px"></td>
-      <td style="min-width:50px">Leaf</td>
-      <td style="min-width:50px">4.0999999999999996</td>
-      <td style="min-width:50px">15440</td>
-      <td style="min-width:50px">11/01/13</td>
-      <td style="min-width:50px">06/22/09</td>
-      <td style="min-width:50px"><a href="https://www.ncbi.nlm.nih.gov/nuccore/ACQK00000000.1">https://www.ncbi.nlm.nih.gov/nuccore/ACQK00000000.1</a></td>
-    </tr>
-    <tr>
-      <td style="min-width:50px">GAPX01</td>
-      <td style="min-width:50px">TSA</td>
-      <td style="min-width:50px">Amaranthus tricolor</td>
-      <td style="min-width:50px">PLN</td>
-      <td style="min-width:50px">PRJNA202395</td>
-      <td style="min-width:50px">SAMN02142107</td>
-      <td style="min-width:50px"></td>
-      <td style="min-width:50px">Young seedling, in vitro plantlet</td>
-      <td style="min-width:50px">37.700000000000003</td>
-      <td style="min-width:50px">45529</td>
-      <td style="min-width:50px">12/06/13</td>
-      <td style="min-width:50px">12/06/13</td>
-      <td style="min-width:50px"><a href="https://www.ncbi.nlm.nih.gov/nuccore/GAPX00000000.1">https://www.ncbi.nlm.nih.gov/nuccore/GAPX00000000.1</a></td>
-    </tr>
-    <tr>
-      <td style="min-width:50px">JSWR01</td>
-      <td style="min-width:50px">WGS</td>
-      <td style="min-width:50px">Conyza canadensis</td>
-      <td style="min-width:50px">PLN</td>
-      <td style="min-width:50px">PRJNA248374</td>
-      <td style="min-width:50px">SAMN02798061</td>
-      <td style="min-width:50px">TN-R</td>
-      <td style="min-width:50px">Leaf, rosette, greenhouse grown</td>
-      <td style="min-width:50px">311.10000000000002</td>
-      <td style="min-width:50px">20075</td>
-      <td style="min-width:50px">04/07/15</td>
-      <td style="min-width:50px">11/13/14</td>
-      <td style="min-width:50px"><a href="https://www.ncbi.nlm.nih.gov/nuccore/JSWR00000000.1">https://www.ncbi.nlm.nih.gov/nuccore/JSWR00000000.1</a></td>
-    </tr>
-    <tr>
-      <td style="min-width:50px">GBXX01</td>
-      <td style="min-width:50px">TSA</td>
-      <td style="min-width:50px">Lolium multiflorum</td>
-      <td style="min-width:50px">PLN</td>
-      <td style="min-width:50px">PRJNA266320</td>
-      <td style="min-width:50px">SAMN03164177</td>
-      <td style="min-width:50px">Lemtal</td>
-      <td style="min-width:50px">Leaf</td>
-      <td style="min-width:50px">55.5</td>
-      <td style="min-width:50px">55564</td>
-      <td style="min-width:50px">04/16/15</td>
-      <td style="min-width:50px">03/16/15</td>
-      <td style="min-width:50px"><a href="https://www.ncbi.nlm.nih.gov/nuccore/GBXX00000000.1">https://www.ncbi.nlm.nih.gov/nuccore/GBXX00000000.1</a></td>
-    </tr>
-    <tr>
-      <td style="min-width:50px">GAYX01</td>
-      <td style="min-width:50px">TSA</td>
-      <td style="min-width:50px">Lolium perenne</td>
-      <td style="min-width:50px">PLN</td>
-      <td style="min-width:50px">PRJNA222646</td>
-      <td style="min-width:50px">SAMN02566648, SAMN02566649, SAMN02566650, SAMN02566651, SAMN02566652, SAMN02566653</td>
-      <td style="min-width:50px"></td>
-      <td style="min-width:50px">Inflorescence, leaf sheath, mature leaf, meristem root, stem</td>
-      <td style="min-width:50px">147.1</td>
-      <td style="min-width:50px">185833</td>
-      <td style="min-width:50px">08/28/14</td>
-      <td style="min-width:50px">07/22/14</td>
-      <td style="min-width:50px"><a href="https://www.ncbi.nlm.nih.gov/nuccore/GAYX00000000.1">https://www.ncbi.nlm.nih.gov/nuccore/GAYX00000000.1</a></td>
-    </tr>
     </tbody>
   </table>
 </div>
