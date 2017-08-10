@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f677117d-3ea3-4917-bd99-eb545adb38aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/fasta/Poa Supina.fasta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/templates/search/species.html" afterPath="$PROJECT_DIR$/search/templates/search/species.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,11 +54,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Poa Supina.fasta" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Poa Supina.fasta" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/data/fasta/Poa Supina.fasta">
           <provider selected="true" editor-type-id="LargeFileEditor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="species.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/search/templates/search/species.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4011">
+              <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+              <folding>
+                <element signature="e#2375#2381#1" expanded="true" />
+                <element signature="e#3246#3252#1" expanded="true" />
+                <element signature="e#4136#4142#1" expanded="true" />
+                <element signature="e#5034#5040#1" expanded="true" />
+                <element signature="e#5885#5891#1" expanded="true" />
+                <element signature="e#6733#6739#1" expanded="true" />
+                <element signature="e#7567#7573#1" expanded="true" />
+                <element signature="e#8244#8250#1" expanded="true" />
+                <element signature="e#8914#8920#1" expanded="true" />
+                <element signature="e#9598#9604#1" expanded="true" />
+                <element signature="e#10271#10277#1" expanded="true" />
+                <element signature="e#10936#10942#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,6 +144,7 @@
         <option value="$PROJECT_DIR$/search/views.py" />
         <option value="$PROJECT_DIR$/search/urls.py" />
         <option value="$PROJECT_DIR$/search/templates/search/blastn_search.html" />
+        <option value="$PROJECT_DIR$/search/templates/search/species.html" />
       </list>
     </option>
   </component>
@@ -641,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502332432827</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Sunit Changes">
+      <created>1502332559235</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1502332559235</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -741,13 +772,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/search/templates/search/team.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Website/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1040,6 +1064,27 @@
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/search/species.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4011">
+          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding>
+            <element signature="e#2375#2381#1" expanded="true" />
+            <element signature="e#3246#3252#1" expanded="true" />
+            <element signature="e#4136#4142#1" expanded="true" />
+            <element signature="e#5034#5040#1" expanded="true" />
+            <element signature="e#5885#5891#1" expanded="true" />
+            <element signature="e#6733#6739#1" expanded="true" />
+            <element signature="e#7567#7573#1" expanded="true" />
+            <element signature="e#8244#8250#1" expanded="true" />
+            <element signature="e#8914#8920#1" expanded="true" />
+            <element signature="e#9598#9604#1" expanded="true" />
+            <element signature="e#10271#10277#1" expanded="true" />
+            <element signature="e#10936#10942#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
