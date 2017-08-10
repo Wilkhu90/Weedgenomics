@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f677117d-3ea3-4917-bd99-eb545adb38aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/fasta/test" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search/data/fasta/Annua Infirma Homeo.fasta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +17,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2478">
+            <state relative-caret-position="0">
               <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding>
                 <marker date="1502322262912" expanded="true" signature="3929:6822" ph="..." />
@@ -233,15 +233,15 @@
     <property name="SearchEverywhereHistoryKey" value="searchQuery&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Sunit Sivaraj\PycharmProjects\Weedgenomics\search" />
-      <recent name="C:\Users\Sunit Sivaraj\Desktop\Website\search\static\search" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sunit Sivaraj\PycharmProjects\weedgenomics\search\data\fasta" />
       <recent name="C:\Users\Sunit Sivaraj\PycharmProjects\Weedgenomics\search\data" />
       <recent name="C:\Users\Sunit Sivaraj\PycharmProjects\Weedgenomics\search\static\search\data" />
       <recent name="C:\Users\Sunit Sivaraj\Desktop\Website\search\static\search\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sunit Sivaraj\PycharmProjects\Weedgenomics\search" />
+      <recent name="C:\Users\Sunit Sivaraj\Desktop\Website\search\static\search" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -646,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502323894681</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Sunit Changes">
+      <created>1502324000285</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1502324000285</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1109,7 +1116,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2478">
+        <state relative-caret-position="0">
           <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding>
             <marker date="1502322262912" expanded="true" signature="3929:6822" ph="..." />
@@ -1147,7 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/data/fasta/Annua Infirma Homeo.fasta" />
     <entry file="file://$PROJECT_DIR$/search/templates/search/blastn_search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -1161,6 +1167,13 @@
         <state relative-caret-position="315">
           <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/data/fasta/Annua Infirma Homeo.fasta">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
