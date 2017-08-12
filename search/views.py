@@ -13,6 +13,7 @@ import tempfile
 import os
 import re, math
 
+
 def index(request):
     template = "search/index.html"
     context = {}
@@ -36,15 +37,18 @@ def team(request):
     context = {}
     return render(request, template, context)
 
+
 def sponsor(request):
     template = "search/sponsor.html"
     context = {}
     return render(request, template, context)
 
+
 def software(request):
     template = "search/software.html"
     context = {}
     return render(request, template, context)
+
 
 # Keyword search
 def search_keyword(request):
@@ -67,6 +71,7 @@ def detail(request, contig_id):
     context = {"sequence": sequence}
     template = "search/details.html"
     return render(request, template, context)
+
 
 def herbicideDetail(request, genbankId):
     try:
@@ -226,6 +231,7 @@ def blastn_at_ncbi(seq_id):
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     return hits
 
+
 def blastn_func(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     hit_list = blastn_at_ncbi(seq_id)
@@ -244,6 +250,7 @@ def blastn_func(request, seq_id):
     template = "search/blastn_results.html"
 
     return render(request, template, context)
+
 
 def blastn_render(request):
     return render(request, "search/blastn_search.html", {})
@@ -313,6 +320,7 @@ def blastx_at_ncbi(seq_id):
                          "description": query_sequence.gene_description, "ID": query_sequence.id, "Hit_id": result.hit_id})
     return hits
 
+
 def blastx_func(request, seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
     hit_list = blastx_at_ncbi(seq_id)
@@ -332,6 +340,7 @@ def blastx_func(request, seq_id):
 
     return render(request, template, context)
 
+
 def herbiscide_search(request):
     geneId= request.GET.get("geneId")
     genus = request.GET.get("genus")
@@ -347,7 +356,6 @@ def herbiscide_render(request):
     template = "search/herbiscide_search.html"
     return render(request, template, {})
 
-# This is a test statement
 
 def download_herb_file(request, genbankId):
     sequence = herbiscide.objects.get(genbankId=genbankId)
