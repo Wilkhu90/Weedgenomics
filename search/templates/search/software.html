@@ -1,6 +1,45 @@
 {% extends "search/index.html" %}
 {% block search %}
 
-<h1>Softwares Used</h1>
+<h1>Softwares utilized by the application</h1>
+<div class="media">
+  <div class="media-left">
+    <img src="http://biopython.org/DIST/docs/tutorial/images/biopython_logo.svg" height="200px" width="200px" class="media-object img-circle">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><u><a href="http://biopython.org/">Biopython</a></u></h4>
+    <p style="text-align:justify">The repository extensively utilizes Biopython to conduct local blast searches and search NCBI databases.  For those not familiar with Biopython we highly recommend it for general bioinformatics usage.   Software utilized for transcriptome assembly and annotation.</p>
+  </div>
+</div>
 
+<div class="media">
+  <div class="media-left">
+    <img src="https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/TrinityCompositeLogo.png" height="200px" width="200px" class="media-object img-circle">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><u><a href="https://github.com/trinityrnaseq/trinityrnaseq/wikiTrinity">Trinity</a></u></h4>
+    <p style="text-align:justify">It was the primary software used transcriptome assembly.  Unless indicated, Trinity was not set to exclude small assembled contigs to allow for future discovery by end-users.</p>
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <img src="https://trinotate.github.io/images/TrinotateLogo.png" height="200px" width="200px" class="media-object img-circle">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><u><a href="https://trinotate.github.io/Trinotate">Trinotate</a></u></h4>
+    <p style="text-align:justify">It was the primary software used for annotation.  Names assigned to assembled contigs were taken from <a href="http://www.uniprot.org/">Swiss-Prot</a> annotation by Trinotate.  Unannotated contigs were annotated as "unidentified contig".</p>
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <img src="https://connectedover.com/images/Softwares01.png" height="200px" width="200px" class="media-object img-circle">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><u></u></h4>
+    <p style="text-align:justify"><a href="https://www.ebi.ac.uk/~zerbino/oases/">Velvet-Oases</a>, <a href="http://soap.genomics.org.cn/SOAPdenovo-Trans.html">SOAPdenovo-Trans</a>, and Trinity were used in combination along with <a href="http://arthropods.eugenes.org/genes2/about/EvidentialGene_trassembly_pipe.html">EvidentialGene</a> was used for some transcriptome assemblies to maximize assembly "completeness".</p>
+    <p style="text-align:justify"><a href="https://www.blast2go.com/">Blast2Go</a> and CLC Genomics Workbench were used in some annotation and assembly, however due to the cost of these software they were only used sparingly.</p>
+  </div>
+</div>
 {% endblock %}
