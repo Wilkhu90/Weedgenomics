@@ -158,6 +158,10 @@ def blastn_search(request):
         database = 'search/data/Poa_infirma/InfirmaFinal.fasta'
     if database_name == 'Poa Supina':
         database = 'search/data/Poa_supina/SupinaFinal.fasta'
+    if database_name == 'Amaranthus Tricolor':
+        database = 'search/data/Poa_supina/SupinaFinal.fasta'
+    if database_name == 'Amaranthus Tuberculatus':
+        database = 'search/data/Poa_supina/SupinaFinal.fasta'
 
     hits = []
     if len(query) > 0:
