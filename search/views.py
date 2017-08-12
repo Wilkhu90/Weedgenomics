@@ -203,6 +203,7 @@ def blastn_search(request):
 
 def blastn_at_ncbi(seq_id):
     query_sequence = Sequences.objects.get(pk=seq_id)
+    print(query_sequence.sequence)
     result_handle = NCBIWWW.qblast("blastn", "nt", query_sequence.sequence)
     blast_records = NCBIXML.read(result_handle)
     results = blast_records.alignments
